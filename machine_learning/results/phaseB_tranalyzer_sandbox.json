@@ -1,0 +1,72 @@
+{
+ "L7": {
+  "n": 3369,
+  "micro": 0.9881,
+  "macro": 0.9805,
+  "Bpp_ab": 46.6,
+  "Bpp_ba": 109.88,
+  "per_family": {
+   "padcrypt": {
+    "n": 630,
+    "recall": 0.9937,
+    "bpp_ab": 52.5541,
+    "bpp_ba": 118.0931
+   },
+   "sisron": {
+    "n": 494,
+    "recall": 0.9879,
+    "bpp_ab": 28.7561,
+    "bpp_ba": 73.988
+   },
+   "tinba": {
+    "n": 1806,
+    "recall": 0.9972,
+    "bpp_ab": 51.4391,
+    "bpp_ba": 111.4706
+   },
+   "zloader": {
+    "n": 439,
+    "recall": 0.9431,
+    "bpp_ab": 38.2525,
+    "bpp_ba": 131.9296
+   }
+  }
+ },
+ "L3": {
+  "n": 3649,
+  "micro": 0.2853,
+  "macro": 0.439,
+  "Bpp_ab": 95.07,
+  "Bpp_ba": 153.45,
+  "per_family": {
+   "padcrypt": {
+    "n": 632,
+    "recall": 0.0063,
+    "bpp_ab": 104.4078,
+    "bpp_ba": 169.676
+   },
+   "sisron": {
+    "n": 495,
+    "recall": 0.9838,
+    "bpp_ab": 80.7533,
+    "bpp_ba": 125.8064
+   },
+   "tinba": {
+    "n": 1807,
+    "recall": 0.0022,
+    "bpp_ab": 103.4225,
+    "bpp_ba": 163.4035
+   },
+   "zloader": {
+    "n": 715,
+    "recall": 0.7636,
+    "bpp_ab": 75.6098,
+    "bpp_ba": 133.07
+   }
+  }
+ },
+ "flow_structure": {
+  "pkts_median": 1832.0,
+  "duration_median_s": 53.088874101638794
+ }
+}

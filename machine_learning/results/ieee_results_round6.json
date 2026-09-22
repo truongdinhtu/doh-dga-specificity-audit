@@ -1,0 +1,252 @@
+{
+ "E30_probe2b_same_splits": {
+  "percell": {
+   "n": 6391,
+   "BA": 0.3494,
+   "AUC": 0.2311,
+   "PR_AUC": 0.409,
+   "BA_ci95_session": [
+    0.3224,
+    0.3774
+   ],
+   "per_cell_BA": {
+    "curl|alidns|JSON": 0.4222,
+    "curl|cloudflare|JSON": 0.31,
+    "curl|google|JSON": 0.45,
+    "h2dnspython|adguard|GET": 0.25,
+    "h2dnspython|adguard|POST": 0.1867,
+    "h2dnspython|cloudflare|GET": 0.2533,
+    "h2dnspython|cloudflare|POST": 0.2133,
+    "h2dnspython|quad9|GET": 0.31,
+    "h2dnspython|quad9|POST": 0.3733,
+    "h2|adguard|JSON": 0.39,
+    "h2|alidns|JSON": 0.5,
+    "h2|cloudflare|JSON": 0.3167,
+    "h2|google|JSON": 0.4367,
+    "kdig|adguard|GET": 0.2833,
+    "kdig|adguard|POST": 0.3411,
+    "kdig|google|GET": 0.4533,
+    "kdig|google|POST": 0.4533,
+    "kdig|quad9|GET": 0.3742,
+    "kdig|quad9|POST": 0.3627
+   },
+   "per_session_BA_median": NaN
+  },
+  "pooled": {
+   "n": 7248,
+   "BA": 0.4285,
+   "AUC": 0.3785,
+   "PR_AUC": 0.4197,
+   "BA_ci95_session": [
+    0.3886,
+    0.4706
+   ],
+   "per_cell_BA": {
+    "curl|adguard|JSON": 0.4597,
+    "curl|alidns|JSON": 0.4042,
+    "curl|cloudflare|JSON": 0.37,
+    "curl|google|JSON": 0.6733,
+    "h2dnspython|adguard|GET": 0.4333,
+    "h2dnspython|adguard|POST": 0.2467,
+    "h2dnspython|cloudflare|GET": 0.24,
+    "h2dnspython|cloudflare|POST": 0.2667,
+    "h2dnspython|google|GET": 0.5,
+    "h2dnspython|google|POST": 0.54,
+    "h2dnspython|quad9|GET": 0.4833,
+    "h2dnspython|quad9|POST": 0.4967,
+    "h2|adguard|JSON": 0.52,
+    "h2|alidns|JSON": 0.4633,
+    "h2|cloudflare|JSON": 0.4067,
+    "h2|google|JSON": 0.6967,
+    "kdig|adguard|GET": 0.3633,
+    "kdig|adguard|POST": 0.298,
+    "kdig|cloudflare|GET": 0.3233,
+    "kdig|cloudflare|POST": 0.39,
+    "kdig|google|GET": 0.4633,
+    "kdig|google|POST": 0.46,
+    "kdig|quad9|GET": 0.4258,
+    "kdig|quad9|POST": 0.366
+   },
+   "per_session_BA_median": NaN
+  },
+  "pooled_factors": {
+   "n": 7248,
+   "BA": 0.3687,
+   "AUC": 0.2734,
+   "PR_AUC": 0.3799,
+   "BA_ci95_session": [
+    0.3361,
+    0.4015
+   ],
+   "per_cell_BA": {
+    "curl|adguard|JSON": 0.4698,
+    "curl|alidns|JSON": 0.479,
+    "curl|cloudflare|JSON": 0.31,
+    "curl|google|JSON": 0.58,
+    "h2dnspython|adguard|GET": 0.2233,
+    "h2dnspython|adguard|POST": 0.1467,
+    "h2dnspython|cloudflare|GET": 0.24,
+    "h2dnspython|cloudflare|POST": 0.2167,
+    "h2dnspython|google|GET": 0.3993,
+    "h2dnspython|google|POST": 0.4133,
+    "h2dnspython|quad9|GET": 0.3567,
+    "h2dnspython|quad9|POST": 0.39,
+    "h2|adguard|JSON": 0.4667,
+    "h2|alidns|JSON": 0.4733,
+    "h2|cloudflare|JSON": 0.3233,
+    "h2|google|JSON": 0.5333,
+    "kdig|adguard|GET": 0.32,
+    "kdig|adguard|POST": 0.2715,
+    "kdig|cloudflare|GET": 0.2867,
+    "kdig|cloudflare|POST": 0.3233,
+    "kdig|google|GET": 0.45,
+    "kdig|google|POST": 0.4633,
+    "kdig|quad9|GET": 0.3806,
+    "kdig|quad9|POST": 0.3203
+   },
+   "per_session_BA_median": NaN
+  }
+ },
+ "E30_loco_ci": {
+  "curl": {
+   "BA": 0.5503,
+   "BA_ci95_session": [
+    0.435,
+    0.653
+   ],
+   "AUC": 0.5921,
+   "n_sessions": 40
+  },
+  "h2": {
+   "BA": 0.5452,
+   "BA_ci95_session": [
+    0.4762,
+    0.6241
+   ],
+   "AUC": 0.672,
+   "n_sessions": 40
+  },
+  "h2dnspython": {
+   "BA": 0.5483,
+   "BA_ci95_session": [
+    0.4399,
+    0.6623
+   ],
+   "AUC": 0.5859,
+   "n_sessions": 40
+  },
+  "kdig": {
+   "BA": 0.5143,
+   "BA_ci95_session": [
+    0.3611,
+    0.6731
+   ],
+   "AUC": 0.5689,
+   "n_sessions": 40
+  }
+ },
+ "E31_attrition": {
+  "A_rows_total": {
+   "padcrypt": 632,
+   "sisron": 495,
+   "tinba": 1807,
+   "zloader": 715
+  },
+  "bidirectional": {
+   "tinba": 1807,
+   "zloader": 715,
+   "padcrypt": 632,
+   "sisron": 495
+  },
+  "port443": {
+   "tinba": 1807,
+   "zloader": 715,
+   "padcrypt": 632,
+   "sisron": 495
+  },
+  "zero_payload_both_dirs": {
+   "zloader": 276,
+   "padcrypt": 2,
+   "sisron": 1,
+   "tinba": 1
+  },
+  "L7_valid": {
+   "tinba": 1806,
+   "padcrypt": 630,
+   "sisron": 494,
+   "zloader": 439
+  },
+  "same_flowIDs": {
+   "n": 3369,
+   "recall_L3": 0.2259,
+   "recall_L7": 0.9881,
+   "hdr_bytes_per_pkt_ab_mean": 52.04,
+   "hdr_bytes_per_pkt_ab_p10_p90": [
+    52.0,
+    52.04
+   ]
+  }
+ },
+ "E32_probe1b": {
+  "F1_full": 0.9937,
+  "F1_matched": 0.9694,
+  "F1_drop": 0.0243,
+  "F1_drop_ci95_session": [
+   0.0139,
+   0.0366
+  ],
+  "univariate_Bpp_matched_train_BA_on_matched_groupedCV": 0.6302,
+  "univariate_Bpp_matched_train_F1_on_unmatched_test": 0.7724
+ },
+ "E33_adversarial_fair": {
+  "uniform_+20B": {
+   "ASR_conditional": 0.3924,
+   "FNR_after": 0.3945,
+   "added_bytes_per_pkt_mean": 20.0
+  },
+  "uniform_+40B": {
+   "ASR_conditional": 0.7971,
+   "FNR_after": 0.7968,
+   "added_bytes_per_pkt_mean": 40.0
+  },
+  "uniform_+60B": {
+   "ASR_conditional": 0.9884,
+   "FNR_after": 0.9883,
+   "added_bytes_per_pkt_mean": 60.0
+  },
+  "uniform_+80B": {
+   "ASR_conditional": 0.992,
+   "FNR_after": 0.9921,
+   "added_bytes_per_pkt_mean": 80.0
+  },
+  "uniform_+120B": {
+   "ASR_conditional": 0.992,
+   "FNR_after": 0.9921,
+   "added_bytes_per_pkt_mean": 120.0
+  },
+  "shap_aware_gaussian_155": {
+   "ASR_conditional": 0.9645,
+   "FNR_after": 0.9646,
+   "added_bytes_per_pkt_mean": 79.93
+  },
+  "block_padding_128": {
+   "ASR_conditional": 0.9345,
+   "FNR_after": 0.9342,
+   "added_bytes_per_pkt_mean": 58.56
+  }
+ },
+ "E34_baselines": {
+  "always_positive": {
+   "sandbox_recall": 1.0,
+   "FPR_tools": 1.0,
+   "FPR_browser_test": 1.0,
+   "F1_modelB_test": 0.4302
+  },
+  "modelB": {
+   "sandbox_recall": 0.9881,
+   "FPR_tools": 0.9713,
+   "FPR_browser_test": 0.0017,
+   "F1_modelB_test": 0.9937
+  }
+ }
+}

@@ -1,0 +1,71 @@
+[1;33m[WRN][0m [0;33mRunning Tranalyzer as root on a pcap is not recommended[0m
+================================================================================
+Tranalyzer 0.9.4 (Anteater), Cobra. PID: 541, Prio: 0, SID: 666
+================================================================================
+Date: 1789814781.000413618 sec (Sat 19 Sep 2026 10:46:21 UTC)
+[1;34m[INF][0m [0;34mCreating flows for L2, IPv4, IPv6[0m
+Active plugins:
+    01: basicFlow, 0.9.4
+    02: basicStats, 0.9.4
+    03: tcpFlags, 0.9.4
+    04: txtSink, 0.9.4
+[1;34m[INF][0m [0;34mIPv4 Ver: 6, Rev: 17072025, Range Mode: 0, subnet ranges loaded: 7243401 (7.24 M)[0m
+[1;34m[INF][0m [0;34mIPv6 Ver: 6, Rev: 17072025, Range Mode: 0, subnet ranges loaded: 1422146 (1.42 M)[0m
+Processing file: sisron-doh-24h.pcap
+[1;34m[INF][0m [0;34mBPF: (tcp port 443) or (vlan and tcp port 443)[0m
+Link layer type: Ethernet [EN10MB/1]
+Snapshot length: 262144 (262.14 K)
+Dump start: 1651162028.596840000 sec (Thu 28 Apr 2022 16:07:08 GMT)
+Dump stop : 1651248407.208134000 sec (Fri 29 Apr 2022 16:06:47 GMT)
+Total dump duration: 86378.611294000 sec (23h 59m 38s)
+Finished processing. Elapsed time: 0.121937201 sec
+Finished unloading flow memory. Time: 0.121951160 sec
+Percentage completed: 100.00%
+Number of processed packets: 213569 (213.57 K)
+Number of processed bytes: 30509599 (30.51 M)
+Number of raw bytes: 30509599 (30.51 M)
+Number of pad bytes: 96
+Number of pcap bytes: 33926727 (33.93 M)
+Number of IPv4 packets: 213569 (213.57 K) [100.00%]
+Number of A packets: 105855 (105.86 K) [49.56%]
+Number of B packets: 107714 (107.71 K) [50.44%]
+Number of A bytes: 9715179 (9.72 M) [31.84%]
+Number of B bytes: 20794420 (20.79 M) [68.16%]
+<A packet load>: 91.78
+<B packet load>: 193.05
+--------------------------------------------------------------------------------
+[1mbasicStats:[0m Flow max(pktload): 1406 (1.41 K)
+[1mbasicStats:[0m Flow max(b/s), pkts: 7673906 (7.67 Mb/s), 653
+[1mbasicStats:[0m Biggest L3 flow talker: 91.189.91.42 (GB): 4905 (4.91 K) [2.30%] packets
+[1mbasicStats:[0m Biggest L3 flow talker: 91.189.91.42 (GB): 6901020 (6.90 M) [22.62%] bytes
+[1mtcpFlags:[0m Aggregated ipFlags=0x4044
+[1mtcpFlags:[0m Aggregated tcpFStat=0x5201
+[1mtcpFlags:[0m Aggregated tcpFlags=0x031f
+--------------------------------------------------------------------------------
+Headers count: min: 3, max: 3, avg: 3.00
+Number of TCP packets: 213569 (213.57 K) [100.00%]
+Number of TCP bytes: 30509599 (30.51 M) [100.00%]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of processed      flows: 990
+Number of processed IPv4 flows: 990 [100.00%]
+Number of processed A    flows: 495 [50.00%]
+Number of processed B    flows: 495 [50.00%]
+Number of request        flows: 495 [50.00%]
+Number of reply          flows: 495 [50.00%]
+Total   A/B    flow asymmetry: 0.00
+Total req/rply flow asymmetry: 0.00
+Number of processed A+B packets/A+B flows: 215.73
+Number of processed A   packets/A   flows: 213.85
+Number of processed   B packets/  B flows: 217.60
+Number of processed total packets/s: 2.47
+Number of processed A+B   packets/s: 2.47
+Number of processed A     packets/s: 1.23
+Number of processed   B   packets/s: 1.25
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<Number of processed flows/s>: 0.01
+<Bandwidth>: 2826 b/s (2.83 Kb/s)
+<Raw bandwidth>: 2826 b/s (2.83 Kb/s)
+Max number of flows in memory: 10 [0.00%]
+Memory usage: 0.02 GB [0.37%]
+Aggregated flowStat=0x0400020000004001
+[1;34m[INF][0m [0;34mIPv4 flows[0m

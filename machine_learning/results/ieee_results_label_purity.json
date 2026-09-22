@@ -1,0 +1,26 @@
+{
+ "per_session": {
+  "cloudflare_1": {
+   "n_flows": 17,
+   "n_spill_into_next_block": 3,
+   "n_starts_before_prev_end": 0,
+   "margin_to_next_block_s": {
+    "min": -82.69,
+    "median": 80.5,
+    "max": 219.83
+   }
+  },
+  "google_1": {
+   "n_flows": 15,
+   "n_spill_into_next_block": 2,
+   "n_starts_before_prev_end": 0,
+   "margin_to_next_block_s": {
+    "min": -60.97,
+    "median": 80.45,
+    "max": 168.13
+   }
+  }
+ },
+ "total_flows": 32,
+ "total_contaminated": 5
+}

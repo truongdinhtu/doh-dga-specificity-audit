@@ -1,0 +1,424 @@
+{
+  "E15_factorial": {
+    "cells": {
+      "curl|adguard|JSON": {
+        "BA": 0.6188,
+        "BA_std": 0.1438,
+        "AUC": NaN,
+        "AUC_std": NaN,
+        "PR_AUC": 0.7761,
+        "n_benign": 149,
+        "n_dga_used": 149,
+        "n_sessions": 10
+      },
+      "curl|alidns|JSON": {
+        "BA": 0.6128,
+        "BA_std": 0.0765,
+        "AUC": NaN,
+        "AUC_std": NaN,
+        "PR_AUC": 0.9419,
+        "n_benign": 167,
+        "n_dga_used": 167,
+        "n_sessions": 10
+      },
+      "curl|cloudflare|JSON": {
+        "BA": 0.4079,
+        "BA_std": 0.0397,
+        "AUC": NaN,
+        "AUC_std": NaN,
+        "PR_AUC": 0.6316,
+        "n_benign": 150,
+        "n_dga_used": 150,
+        "n_sessions": 10
+      },
+      "curl|google|JSON": {
+        "BA": 0.6819,
+        "BA_std": 0.2286,
+        "AUC": NaN,
+        "AUC_std": NaN,
+        "PR_AUC": 0.6453,
+        "n_benign": 150,
+        "n_dga_used": 150,
+        "n_sessions": 10
+      },
+      "h2|adguard|JSON": {
+        "BA": 0.6398,
+        "BA_std": 0.1952,
+        "AUC": NaN,
+        "AUC_std": NaN,
+        "PR_AUC": 0.7018,
+        "n_benign": 150,
+        "n_dga_used": 150,
+        "n_sessions": 10
+      },
+      "h2|alidns|JSON": {
+        "BA": 0.6768,
+        "BA_std": 0.1416,
+        "AUC": NaN,
+        "AUC_std": NaN,
+        "PR_AUC": 0.6991,
+        "n_benign": 150,
+        "n_dga_used": 150,
+        "n_sessions": 10
+      },
+      "h2|cloudflare|JSON": {
+        "BA": 0.4269,
+        "BA_std": 0.1005,
+        "AUC": NaN,
+        "AUC_std": NaN,
+        "PR_AUC": 0.6338,
+        "n_benign": 150,
+        "n_dga_used": 150,
+        "n_sessions": 10
+      },
+      "h2|google|JSON": {
+        "BA": 0.6503,
+        "BA_std": 0.1892,
+        "AUC": NaN,
+        "AUC_std": NaN,
+        "PR_AUC": 0.7473,
+        "n_benign": 150,
+        "n_dga_used": 150,
+        "n_sessions": 10
+      },
+      "h2dnspython|adguard|GET": {
+        "BA": 0.4604,
+        "BA_std": 0.0836,
+        "AUC": NaN,
+        "AUC_std": NaN,
+        "PR_AUC": 0.6509,
+        "n_benign": 150,
+        "n_dga_used": 150,
+        "n_sessions": 10
+      },
+      "h2dnspython|adguard|POST": {
+        "BA": 0.5312,
+        "BA_std": 0.1478,
+        "AUC": NaN,
+        "AUC_std": NaN,
+        "PR_AUC": 0.6421,
+        "n_benign": 150,
+        "n_dga_used": 150,
+        "n_sessions": 10
+      },
+      "h2dnspython|cloudflare|GET": {
+        "BA": 0.4258,
+        "BA_std": 0.0817,
+        "AUC": NaN,
+        "AUC_std": NaN,
+        "PR_AUC": 0.6265,
+        "n_benign": 150,
+        "n_dga_used": 150,
+        "n_sessions": 10
+      },
+      "h2dnspython|cloudflare|POST": {
+        "BA": 0.3809,
+        "BA_std": 0.0303,
+        "AUC": NaN,
+        "AUC_std": NaN,
+        "PR_AUC": 0.6385,
+        "n_benign": 150,
+        "n_dga_used": 150,
+        "n_sessions": 10
+      },
+      "h2dnspython|google|GET": {
+        "BA": 0.6885,
+        "BA_std": 0.186,
+        "AUC": NaN,
+        "AUC_std": NaN,
+        "PR_AUC": 0.6854,
+        "n_benign": 149,
+        "n_dga_used": 149,
+        "n_sessions": 10
+      },
+      "h2dnspython|google|POST": {
+        "BA": 0.6089,
+        "BA_std": 0.2531,
+        "AUC": NaN,
+        "AUC_std": NaN,
+        "PR_AUC": 0.6566,
+        "n_benign": 150,
+        "n_dga_used": 150,
+        "n_sessions": 10
+      },
+      "h2dnspython|quad9|GET": {
+        "BA": 0.4813,
+        "BA_std": 0.0977,
+        "AUC": NaN,
+        "AUC_std": NaN,
+        "PR_AUC": 0.6725,
+        "n_benign": 150,
+        "n_dga_used": 150,
+        "n_sessions": 10
+      },
+      "h2dnspython|quad9|POST": {
+        "BA": 0.5233,
+        "BA_std": 0.2318,
+        "AUC": NaN,
+        "AUC_std": NaN,
+        "PR_AUC": 0.628,
+        "n_benign": 150,
+        "n_dga_used": 150,
+        "n_sessions": 10
+      },
+      "kdig|adguard|GET": {
+        "BA": 0.5735,
+        "BA_std": 0.1528,
+        "AUC": NaN,
+        "AUC_std": NaN,
+        "PR_AUC": 0.7626,
+        "n_benign": 150,
+        "n_dga_used": 150,
+        "n_sessions": 10
+      },
+      "kdig|adguard|POST": {
+        "BA": 0.4974,
+        "BA_std": 0.0438,
+        "AUC": NaN,
+        "AUC_std": NaN,
+        "PR_AUC": 0.69,
+        "n_benign": 151,
+        "n_dga_used": 151,
+        "n_sessions": 10
+      },
+      "kdig|cloudflare|GET": {
+        "BA": 0.3991,
+        "BA_std": 0.2016,
+        "AUC": NaN,
+        "AUC_std": NaN,
+        "PR_AUC": 0.654,
+        "n_benign": 150,
+        "n_dga_used": 150,
+        "n_sessions": 10
+      },
+      "kdig|cloudflare|POST": {
+        "BA": 0.4092,
+        "BA_std": 0.1094,
+        "AUC": NaN,
+        "AUC_std": NaN,
+        "PR_AUC": 0.6729,
+        "n_benign": 150,
+        "n_dga_used": 150,
+        "n_sessions": 10
+      },
+      "kdig|google|GET": {
+        "BA": 0.693,
+        "BA_std": 0.2414,
+        "AUC": NaN,
+        "AUC_std": NaN,
+        "PR_AUC": 0.6896,
+        "n_benign": 150,
+        "n_dga_used": 150,
+        "n_sessions": 10
+      },
+      "kdig|google|POST": {
+        "BA": 0.6774,
+        "BA_std": 0.2298,
+        "AUC": NaN,
+        "AUC_std": NaN,
+        "PR_AUC": 0.7286,
+        "n_benign": 150,
+        "n_dga_used": 150,
+        "n_sessions": 10
+      },
+      "kdig|quad9|GET": {
+        "BA": 0.6636,
+        "BA_std": 0.184,
+        "AUC": NaN,
+        "AUC_std": NaN,
+        "PR_AUC": 0.7273,
+        "n_benign": 155,
+        "n_dga_used": 155,
+        "n_sessions": 10
+      },
+      "kdig|quad9|POST": {
+        "BA": 0.4573,
+        "BA_std": 0.1499,
+        "AUC": NaN,
+        "AUC_std": NaN,
+        "PR_AUC": 0.6765,
+        "n_benign": 153,
+        "n_dga_used": 153,
+        "n_sessions": 10
+      }
+    },
+    "summary": {
+      "n_cells": 24,
+      "BA_mean": 0.5494,
+      "BA_sd": 0.108,
+      "BA_min": 0.3809,
+      "BA_max": 0.693,
+      "AUC_mean": NaN,
+      "AUC_sd": NaN,
+      "cells_BA_above_0.6": 11
+    }
+  },
+  "E15_hierarchical": {
+    "client": {
+      "BA": 0.4757,
+      "BA_std": 0.0248,
+      "AUC": 0.4328,
+      "AUC_std": 0.0529,
+      "PR_AUC": 0.4514,
+      "n": 7248
+    },
+    "client+resolver": {
+      "BA": 0.4696,
+      "BA_std": 0.043,
+      "AUC": 0.4257,
+      "AUC_std": 0.0645,
+      "PR_AUC": 0.445,
+      "n": 7248
+    },
+    "client+resolver+encoding": {
+      "BA": 0.4293,
+      "BA_std": 0.0289,
+      "AUC": 0.3833,
+      "AUC_std": 0.0386,
+      "PR_AUC": 0.4289,
+      "n": 7248
+    }
+  },
+  "E16_nested": {
+    "folds": [
+      {
+        "fold": 0,
+        "selected": {
+          "num_leaves": 31,
+          "n_estimators": 100,
+          "learning_rate": 0.05
+        },
+        "inner_F1": 0.9882,
+        "outer_F1": 0.9812
+      },
+      {
+        "fold": 1,
+        "selected": {
+          "num_leaves": 31,
+          "n_estimators": 300,
+          "learning_rate": 0.05
+        },
+        "inner_F1": 0.9871,
+        "outer_F1": 0.9788
+      },
+      {
+        "fold": 2,
+        "selected": {
+          "num_leaves": 31,
+          "n_estimators": 300,
+          "learning_rate": 0.05
+        },
+        "inner_F1": 0.986,
+        "outer_F1": 0.9923
+      },
+      {
+        "fold": 3,
+        "selected": {
+          "num_leaves": 15,
+          "n_estimators": 300,
+          "learning_rate": 0.1
+        },
+        "inner_F1": 0.985,
+        "outer_F1": 0.992
+      },
+      {
+        "fold": 4,
+        "selected": {
+          "num_leaves": 15,
+          "n_estimators": 300,
+          "learning_rate": 0.05
+        },
+        "inner_F1": 0.9872,
+        "outer_F1": 0.9961
+      }
+    ],
+    "outer_F1_mean": 0.9881,
+    "outer_F1_std": 0.0068,
+    "grid_size": 16
+  },
+  "E17_bpp_matched": {
+    "BA": 0.9786,
+    "BA_std": 0.0124,
+    "AUC": 0.9987,
+    "AUC_std": 0.0005,
+    "PR_AUC": 0.9988,
+    "n_benign": 8650,
+    "n_malicious": 8650,
+    "F1_random_split": 0.9896,
+    "shap_share_after_matching": {
+      "mean_Bpp_ab": 0.2143,
+      "mean_Bpp_ba": 0.1077,
+      "mean_pps_ab": 0.0302,
+      "mean_pps_ba": 0.0314,
+      "mean_pkts_asm": 0.3397,
+      "mean_bytes_asm": 0.2767
+    },
+    "bpp_share_after_matching": 0.2143
+  },
+  "E18_loco": {
+    "curl": {
+      "F1": 0.777,
+      "BA": 0.5503,
+      "FPR_heldout_tool_benign": 0.5925,
+      "recall_heldout_tool_dga": 0.6931,
+      "n_test": 4627
+    },
+    "h2": {
+      "F1": 0.8922,
+      "BA": 0.5452,
+      "FPR_heldout_tool_benign": 0.8133,
+      "recall_heldout_tool_dga": 0.9037,
+      "n_test": 4596
+    },
+    "h2dnspython": {
+      "F1": 0.7862,
+      "BA": 0.5483,
+      "FPR_heldout_tool_benign": 0.6105,
+      "recall_heldout_tool_dga": 0.7071,
+      "n_test": 9172
+    },
+    "kdig": {
+      "F1": 0.6119,
+      "BA": 0.5143,
+      "FPR_heldout_tool_benign": 0.4417,
+      "recall_heldout_tool_dga": 0.4702,
+      "n_test": 9222
+    }
+  },
+  "E19_size_matched": {
+    "real_short_le100": {
+      "n": 114,
+      "recall_modelB": 0.5175,
+      "bpp_ab_mean": 139.02,
+      "families": {
+        "zloader": 90,
+        "sisron": 9,
+        "tinba": 8,
+        "padcrypt": 7
+      }
+    },
+    "real_long_gt100": {
+      "n": 2243,
+      "recall_modelB": 0.0557,
+      "bpp_ab_mean": 100.8
+    },
+    "generated_long_ge100": {
+      "n": 14886,
+      "bpp_ab_browser": 88.58,
+      "bpp_ab_dga": 75.47,
+      "n_browser": 10344,
+      "n_dga": 4542
+    },
+    "modelB_long_only": {
+      "in_domain_F1": 0.9863,
+      "recall_real_long": 0.025,
+      "recall_real_all": 0.045
+    }
+  },
+  "E20_prevalence": {
+    "PR_AUC_balanced": 0.4402,
+    "PR_AUC_chance_balanced": 0.5,
+    "FPR_at_recall_0.5": 0.6523,
+    "FPR_at_recall_0.9": 0.9307
+  }
+}

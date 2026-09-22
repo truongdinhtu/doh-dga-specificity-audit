@@ -1,0 +1,387 @@
+[cloudflare_1] {
+ "capture": "doh_capture_20260920_014023_L7.csv",
+ "n_dirA_rows": 32,
+ "n_bidirectional_443": 32,
+ "n_after_feature_dropna": 21,
+ "n_in_gap_dropped": 4,
+ "n_labelled": 17,
+ "n_blocks": 16,
+ "order": [
+  "dga",
+  "dga",
+  "dga",
+  "benign",
+  "benign",
+  "benign",
+  "dga",
+  "dga",
+  "dga",
+  "benign",
+  "benign",
+  "benign",
+  "dga",
+  "dga",
+  "benign",
+  "benign"
+ ],
+ "per_block_label_n": {
+  "benign": 9,
+  "dga:flubot": 1,
+  "dga:qsnatch": 3,
+  "dga:zloader": 4
+ },
+ "lookups_per_block": [
+  194,
+  191,
+  197,
+  198,
+  182,
+  201,
+  201,
+  209,
+  190,
+  199,
+  198,
+  203,
+  209,
+  194,
+  194,
+  200
+ ]
+}
+[google_1] {
+ "capture": "doh_capture_20260920_195435_google_L7.csv",
+ "n_dirA_rows": 39,
+ "n_bidirectional_443": 38,
+ "n_after_feature_dropna": 24,
+ "n_in_gap_dropped": 9,
+ "n_labelled": 15,
+ "n_blocks": 16,
+ "order": [
+  "dga",
+  "dga",
+  "dga",
+  "benign",
+  "benign",
+  "benign",
+  "dga",
+  "dga",
+  "dga",
+  "benign",
+  "benign",
+  "benign",
+  "dga",
+  "dga",
+  "benign",
+  "benign"
+ ],
+ "per_block_label_n": {
+  "benign": 7,
+  "dga:bazarbackdoor": 3,
+  "dga:flubot": 2,
+  "dga:qsnatch": 1,
+  "dga:zloader": 2
+ },
+ "lookups_per_block": [
+  195,
+  195,
+  194,
+  192,
+  186,
+  196,
+  201,
+  182,
+  204,
+  199,
+  201,
+  205,
+  200,
+  192,
+  193,
+  196
+ ]
+}
+[quad9_1] {
+ "capture": "doh_capture_20260921_211840_L7.csv",
+ "n_dirA_rows": 454,
+ "n_bidirectional_443": 454,
+ "n_after_feature_dropna": 454,
+ "n_in_gap_dropped": 8,
+ "n_labelled": 446,
+ "n_blocks": 16,
+ "order": [
+  "dga",
+  "dga",
+  "dga",
+  "benign",
+  "benign",
+  "benign",
+  "dga",
+  "dga",
+  "dga",
+  "benign",
+  "benign",
+  "benign",
+  "dga",
+  "dga",
+  "benign",
+  "benign"
+ ],
+ "per_block_label_n": {
+  "benign": 233,
+  "dga:bazarbackdoor": 49,
+  "dga:flubot": 30,
+  "dga:qsnatch": 44,
+  "dga:zloader": 90
+ },
+ "lookups_per_block": [
+  196,
+  177,
+  174,
+  181,
+  197,
+  185,
+  190,
+  201,
+  200,
+  190,
+  199,
+  183,
+  190,
+  193,
+  176,
+  192
+ ]
+}
+
+[label purity] 3/478 flows extend into the next block's window under a DIFFERENT binary label and are excluded from the primary analysis (contaminated flowInd/session: [{'session': 'cloudflare_1', 'flowInd': 30}, {'session': 'google_1', 'flowInd': 10}, {'session': 'quad9_1', 'flowInd': 83}]). 475 flows remain.
+
+[data pooled] {
+ "sessions": {
+  "cloudflare_1": {
+   "capture": "doh_capture_20260920_014023_L7.csv",
+   "n_dirA_rows": 32,
+   "n_bidirectional_443": 32,
+   "n_after_feature_dropna": 21,
+   "n_in_gap_dropped": 4,
+   "n_labelled": 17,
+   "n_blocks": 16,
+   "order": [
+    "dga",
+    "dga",
+    "dga",
+    "benign",
+    "benign",
+    "benign",
+    "dga",
+    "dga",
+    "dga",
+    "benign",
+    "benign",
+    "benign",
+    "dga",
+    "dga",
+    "benign",
+    "benign"
+   ],
+   "per_block_label_n": {
+    "benign": 9,
+    "dga:flubot": 1,
+    "dga:qsnatch": 3,
+    "dga:zloader": 4
+   },
+   "lookups_per_block": [
+    194,
+    191,
+    197,
+    198,
+    182,
+    201,
+    201,
+    209,
+    190,
+    199,
+    198,
+    203,
+    209,
+    194,
+    194,
+    200
+   ]
+  },
+  "google_1": {
+   "capture": "doh_capture_20260920_195435_google_L7.csv",
+   "n_dirA_rows": 39,
+   "n_bidirectional_443": 38,
+   "n_after_feature_dropna": 24,
+   "n_in_gap_dropped": 9,
+   "n_labelled": 15,
+   "n_blocks": 16,
+   "order": [
+    "dga",
+    "dga",
+    "dga",
+    "benign",
+    "benign",
+    "benign",
+    "dga",
+    "dga",
+    "dga",
+    "benign",
+    "benign",
+    "benign",
+    "dga",
+    "dga",
+    "benign",
+    "benign"
+   ],
+   "per_block_label_n": {
+    "benign": 7,
+    "dga:bazarbackdoor": 3,
+    "dga:flubot": 2,
+    "dga:qsnatch": 1,
+    "dga:zloader": 2
+   },
+   "lookups_per_block": [
+    195,
+    195,
+    194,
+    192,
+    186,
+    196,
+    201,
+    182,
+    204,
+    199,
+    201,
+    205,
+    200,
+    192,
+    193,
+    196
+   ]
+  },
+  "quad9_1": {
+   "capture": "doh_capture_20260921_211840_L7.csv",
+   "n_dirA_rows": 454,
+   "n_bidirectional_443": 454,
+   "n_after_feature_dropna": 454,
+   "n_in_gap_dropped": 8,
+   "n_labelled": 446,
+   "n_blocks": 16,
+   "order": [
+    "dga",
+    "dga",
+    "dga",
+    "benign",
+    "benign",
+    "benign",
+    "dga",
+    "dga",
+    "dga",
+    "benign",
+    "benign",
+    "benign",
+    "dga",
+    "dga",
+    "benign",
+    "benign"
+   ],
+   "per_block_label_n": {
+    "benign": 233,
+    "dga:bazarbackdoor": 49,
+    "dga:flubot": 30,
+    "dga:qsnatch": 44,
+    "dga:zloader": 90
+   },
+   "lookups_per_block": [
+    196,
+    177,
+    174,
+    181,
+    197,
+    185,
+    190,
+    201,
+    200,
+    190,
+    199,
+    183,
+    190,
+    193,
+    176,
+    192
+   ]
+  }
+ },
+ "n_sessions": 3,
+ "n_labelled_total": 478,
+ "n_label_contaminated": 3,
+ "n_label_pure": 475,
+ "per_session_label_n": {
+  "cloudflare_1": {
+   "benign": 9,
+   "dga": 8
+  },
+  "google_1": {
+   "benign": 7,
+   "dga": 8
+  },
+  "quad9_1": {
+   "benign": 233,
+   "dga": 213
+  }
+ },
+ "flow_pkts_median": 180.0,
+ "flow_duration_median_s": 3.77
+}
+[manifest] wrote 478 rows -> /Users/tutruong/Desktop/Paper03-DNS-over-HTTPS/Code/data/csv_from_pcap/os_doh_client/os_doh_client_predictions_manifest.csv
+
+[E35] Model-B on OS-DoH-client flows (F1 on own test set = 0.9937)
+   n_benign                         249
+   n_dga                            226
+   FPR_benign                       0.7068
+   FPR_ci95_exact                   [0.646, 0.7626]
+   recall_dga                       0.7301
+   recall_ci95_exact                [0.6672, 0.7868]
+   recall_macro_family              0.7457
+   AUC_benign_vs_dga_within_client  0.5093
+   per family: {'bazarbackdoor': {'n': 50, 'recall': 0.8, 'n_blocks': 4}, 'flubot': {'n': 33, 'recall': 0.8788, 'n_blocks': 3}, 'qsnatch': {'n': 47, 'recall': 0.5957, 'n_blocks': 5}, 'zloader': {'n': 96, 'recall': 0.7083, 'n_blocks': 8}}
+
+[E36] Model-T on OS-DoH-client flows (F1 = 0.9396)
+   FPR_benign                       0.3253
+   FPR_ci95_exact                   [0.2675, 0.3873]
+   recall_dga                       0.3628
+   recall_ci95_exact                [0.3001, 0.4292]
+   recall_macro_family              0.372
+   AUC_benign_vs_dga_within_client  0.5154
+   Model-B seeds: {1: {'FPR_benign': 0.7068, 'recall_dga': 0.7301}, 2: {'FPR_benign': 0.7068, 'recall_dga': 0.7301}, 3: {'FPR_benign': 0.7068, 'recall_dga': 0.7301}, 4: {'FPR_benign': 0.7068, 'recall_dga': 0.7301}, 5: {'FPR_benign': 0.7068, 'recall_dga': 0.7301}}
+
+[E37] Feature reference (mean over flows):
+   browser            Bpp_ab=  154.86 Bpp_ba=  368.59 pps_ab= 20.881 pkts_asm=0.478 n=63558
+   tools              Bpp_ab=   74.65 Bpp_ba=  254.43 pps_ab= 30.943 pkts_asm=0.498 n=3624
+   sim_dga            Bpp_ab=   75.10 Bpp_ba=  246.70 pps_ab= 33.696 pkts_asm=0.500 n=23993
+   os_client_benign   Bpp_ab=   63.62 Bpp_ba=  107.72 pps_ab= 30.407 pkts_asm=0.479 n=249
+   os_client_dga      Bpp_ab=   61.75 Bpp_ba=  106.81 pps_ab= 30.686 pkts_asm=0.471 n=226
+
+[E38] Within-OS-client separability (block-grouped 4-fold CV, benign vs DGA from the same client)
+      Reported across estimators, with a learnability control, because n is small:
+   LogReg_C1        AUC_pooled=0.590 AUC_fold=0.5846 BA=0.545 distinct_scores=475 splits/fold=[None, None, None, None]
+   LogReg_C0.1      AUC_pooled=0.566 AUC_fold=0.5646 BA=0.538 distinct_scores=475 splits/fold=[None, None, None, None]
+   Tree_d2_leaf4    AUC_pooled=0.634 AUC_fold=0.6403 BA=0.628 distinct_scores=15 splits/fold=[3, 3, 3, 3]
+   LGBM_small       AUC_pooled=0.680 AUC_fold=0.6874 BA=0.640 distinct_scores=361 splits/fold=[150, 150, 150, 150]
+   LGBM_paper_cfg   AUC_pooled=0.657 AUC_fold=0.6673 BA=0.607 distinct_scores=474 splits/fold=[4099, 4089, 4054, 4100]
+   positive control (injected separable feature), AUC by estimator:
+     LogReg_C1        0.999
+     LogReg_C0.1      0.999
+     Tree_d2_leaf4    0.994
+     LGBM_small       0.996
+     LGBM_paper_cfg   0.996
+   informative-estimator AUC range: [0.5661, 0.6799]
+
+[E39] Per-session breakdown (Model-B), checking the direction replicates across resolvers:
+   cloudflare_1   n_benign=  9 n_dga=  7 FPR=1.0000 recall=1.0000
+   google_1       n_benign=  7 n_dga=  7 FPR=1.0000 recall=1.0000
+   quad9_1        n_benign=233 n_dga=212 FPR=0.6867 recall=0.7123
+
+Saved.

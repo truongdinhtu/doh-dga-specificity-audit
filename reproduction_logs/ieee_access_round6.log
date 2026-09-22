@@ -1,0 +1,70 @@
+[E30] Probe 2b on identical outer session splits
+   percell         n=6391 BA=0.3494 CI=[0.3224, 0.3774] AUC=0.2311 PR=0.409  per-cell BA mean=0.3516
+   pooled          n=7248 BA=0.4285 CI=[0.3886, 0.4706] AUC=0.3785 PR=0.4197  per-cell BA mean=0.4288
+   pooled_factors  n=7248 BA=0.3687 CI=[0.3361, 0.4015] AUC=0.2734 PR=0.3799  per-cell BA mean=0.3682
+   LOCO with CI:
+     curl         {'BA': 0.5503, 'BA_ci95_session': [0.435, 0.653], 'AUC': 0.5921, 'n_sessions': 40}
+     h2           {'BA': 0.5452, 'BA_ci95_session': [0.4762, 0.6241], 'AUC': 0.672, 'n_sessions': 40}
+     h2dnspython  {'BA': 0.5483, 'BA_ci95_session': [0.4399, 0.6623], 'AUC': 0.5859, 'n_sessions': 40}
+     kdig         {'BA': 0.5143, 'BA_ci95_session': [0.3611, 0.6731], 'AUC': 0.5689, 'n_sessions': 40}
+
+[E31] Table 11 attrition, same flow IDs
+   {
+ "A_rows_total": {
+  "padcrypt": 632,
+  "sisron": 495,
+  "tinba": 1807,
+  "zloader": 715
+ },
+ "bidirectional": {
+  "tinba": 1807,
+  "zloader": 715,
+  "padcrypt": 632,
+  "sisron": 495
+ },
+ "port443": {
+  "tinba": 1807,
+  "zloader": 715,
+  "padcrypt": 632,
+  "sisron": 495
+ },
+ "zero_payload_both_dirs": {
+  "zloader": 276,
+  "padcrypt": 2,
+  "sisron": 1,
+  "tinba": 1
+ },
+ "L7_valid": {
+  "tinba": 1806,
+  "padcrypt": 630,
+  "sisron": 494,
+  "zloader": 439
+ },
+ "same_flowIDs": {
+  "n": 3369,
+  "recall_L3": 0.2259,
+  "recall_L7": 0.9881,
+  "hdr_bytes_per_pkt_ab_mean": 52.04,
+  "hdr_bytes_per_pkt_ab_p10_p90": [
+   52.0,
+   52.04
+  ]
+ }
+}
+
+[E32] Probe 1b: paired CI and univariate
+   {'F1_full': 0.9937, 'F1_matched': 0.9694, 'F1_drop': 0.0243, 'F1_drop_ci95_session': [0.0139, 0.0366], 'univariate_Bpp_matched_train_BA_on_matched_groupedCV': 0.6302, 'univariate_Bpp_matched_train_F1_on_unmatched_test': 0.7724}
+
+[E33] Adversarial: fair comparison on same base flows
+   uniform_+20B               {'ASR_conditional': 0.3924, 'FNR_after': 0.3945, 'added_bytes_per_pkt_mean': 20.0}
+   uniform_+40B               {'ASR_conditional': 0.7971, 'FNR_after': 0.7968, 'added_bytes_per_pkt_mean': 40.0}
+   uniform_+60B               {'ASR_conditional': 0.9884, 'FNR_after': 0.9883, 'added_bytes_per_pkt_mean': 60.0}
+   uniform_+80B               {'ASR_conditional': 0.992, 'FNR_after': 0.9921, 'added_bytes_per_pkt_mean': 80.0}
+   uniform_+120B              {'ASR_conditional': 0.992, 'FNR_after': 0.9921, 'added_bytes_per_pkt_mean': 120.0}
+   shap_aware_gaussian_155    {'ASR_conditional': 0.9645, 'FNR_after': 0.9646, 'added_bytes_per_pkt_mean': 79.93}
+   block_padding_128          {'ASR_conditional': 0.9345, 'FNR_after': 0.9342, 'added_bytes_per_pkt_mean': 58.56}
+
+[E34] Trivial baselines
+   {'always_positive': {'sandbox_recall': 1.0, 'FPR_tools': 1.0, 'FPR_browser_test': 1.0, 'F1_modelB_test': 0.4302}, 'modelB': {'sandbox_recall': 0.9881, 'FPR_tools': 0.9713, 'FPR_browser_test': 0.0017, 'F1_modelB_test': 0.9937}}
+
+Saved.

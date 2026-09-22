@@ -1,0 +1,73 @@
+{
+ "n_population": 7248,
+ "n_common": 6391,
+ "n_dropped": 857,
+ "dropped_pct": 11.82,
+ "abstentions": {
+  "fold2|curl|adguard|JSON": {
+   "n_test_flows": 180,
+   "n_train_flows": 118,
+   "train_classes": 1
+  },
+  "fold3|h2dnspython|google|GET": {
+   "n_test_flows": 149,
+   "n_train_flows": 149,
+   "train_classes": 1
+  },
+  "fold3|h2dnspython|google|POST": {
+   "n_test_flows": 150,
+   "n_train_flows": 150,
+   "train_classes": 1
+  },
+  "fold4|kdig|cloudflare|GET": {
+   "n_test_flows": 189,
+   "n_train_flows": 111,
+   "train_classes": 1
+  },
+  "fold4|kdig|cloudflare|POST": {
+   "n_test_flows": 189,
+   "n_train_flows": 111,
+   "train_classes": 1
+  }
+ },
+ "common_set": {
+  "percell": {
+   "n": 6391,
+   "BA": 0.3494,
+   "AUC": 0.2311,
+   "PR_AUC": 0.409
+  },
+  "pooled": {
+   "n": 6391,
+   "BA": 0.429,
+   "AUC": 0.3822,
+   "PR_AUC": 0.4743
+  },
+  "pooled_factors": {
+   "n": 6391,
+   "BA": 0.3684,
+   "AUC": 0.2802,
+   "PR_AUC": 0.4301
+  }
+ },
+ "full_set": {
+  "percell": {
+   "n": 6391,
+   "BA": 0.3494,
+   "AUC": 0.2311,
+   "PR_AUC": 0.409
+  },
+  "pooled": {
+   "n": 7248,
+   "BA": 0.4285,
+   "AUC": 0.3785,
+   "PR_AUC": 0.4197
+  },
+  "pooled_factors": {
+   "n": 7248,
+   "BA": 0.3687,
+   "AUC": 0.2734,
+   "PR_AUC": 0.3799
+  }
+ }
+}

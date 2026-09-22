@@ -1,0 +1,295 @@
+{
+ "E26_modelB_L7": {
+  "n": 3369,
+  "micro": 0.9881,
+  "macro": 0.9805,
+  "per_family": {
+   "padcrypt": {
+    "n": 630,
+    "recall": 0.9937,
+    "bpp_ab": 52.5541,
+    "bpp_ba": 118.0931
+   },
+   "sisron": {
+    "n": 494,
+    "recall": 0.9879,
+    "bpp_ab": 28.7561,
+    "bpp_ba": 73.988
+   },
+   "tinba": {
+    "n": 1806,
+    "recall": 0.9972,
+    "bpp_ab": 51.4391,
+    "bpp_ba": 111.4706
+   },
+   "zloader": {
+    "n": 439,
+    "recall": 0.9431,
+    "bpp_ab": 38.2525,
+    "bpp_ba": 131.9296
+   }
+  }
+ },
+ "E26_modelT_L7": {
+  "n": 3369,
+  "micro": 0.9798,
+  "macro": 0.9657,
+  "per_family": {
+   "padcrypt": {
+    "n": 630,
+    "recall": 0.9921,
+    "bpp_ab": 52.5541,
+    "bpp_ba": 118.0931
+   },
+   "sisron": {
+    "n": 494,
+    "recall": 0.9838,
+    "bpp_ab": 28.7561,
+    "bpp_ba": 73.988
+   },
+   "tinba": {
+    "n": 1806,
+    "recall": 0.9961,
+    "bpp_ab": 51.4391,
+    "bpp_ba": 111.4706
+   },
+   "zloader": {
+    "n": 439,
+    "recall": 0.8907,
+    "bpp_ab": 38.2525,
+    "bpp_ba": 131.9296
+   }
+  }
+ },
+ "E26_flow_structure": {
+  "n_bidirectional": 3649,
+  "pkts_median": 1832.0,
+  "duration_median_s": 53.09,
+  "per_family_n": {
+   "tinba": 1807,
+   "zloader": 715,
+   "padcrypt": 632,
+   "sisron": 495
+  }
+ },
+ "E27": {
+  "NetExP_L3": {
+   "n": 2357,
+   "micro": 0.0781,
+   "macro": 0.3255,
+   "per_family": {
+    "padcrypt": {
+     "n": 216,
+     "recall": 0.0093,
+     "bpp_ab": 107.1935,
+     "bpp_ba": 189.2265
+    },
+    "sisron": {
+     "n": 37,
+     "recall": 0.7838,
+     "bpp_ab": 117.4065,
+     "bpp_ba": 352.9189
+    },
+    "tinba": {
+     "n": 1805,
+     "recall": 0.0006,
+     "bpp_ab": 103.4811,
+     "bpp_ba": 163.6505
+    },
+    "zloader": {
+     "n": 299,
+     "recall": 0.5084,
+     "bpp_ab": 92.4971,
+     "bpp_ba": 212.4256
+    }
+   }
+  },
+  "NetExP_L7": {
+   "n": 2357,
+   "micro": 0.9911,
+   "macro": 0.9491,
+   "per_family": {
+    "padcrypt": {
+     "n": 216,
+     "recall": 0.9815,
+     "bpp_ab": 55.1368,
+     "bpp_ba": 137.2281
+    },
+    "sisron": {
+     "n": 37,
+     "recall": 0.8378,
+     "bpp_ab": 64.6737,
+     "bpp_ba": 300.9251
+    },
+    "tinba": {
+     "n": 1805,
+     "recall": 0.9972,
+     "bpp_ab": 51.4688,
+     "bpp_ba": 111.6471
+    },
+    "zloader": {
+     "n": 299,
+     "recall": 0.9799,
+     "bpp_ab": 40.2264,
+     "bpp_ba": 160.2327
+    }
+   }
+  },
+  "Tranalyzer_L3": {
+   "n": 3649,
+   "micro": 0.2853,
+   "macro": 0.439,
+   "per_family": {
+    "padcrypt": {
+     "n": 632,
+     "recall": 0.0063,
+     "bpp_ab": 104.4078,
+     "bpp_ba": 169.676
+    },
+    "sisron": {
+     "n": 495,
+     "recall": 0.9838,
+     "bpp_ab": 80.7533,
+     "bpp_ba": 125.8064
+    },
+    "tinba": {
+     "n": 1807,
+     "recall": 0.0022,
+     "bpp_ab": 103.4225,
+     "bpp_ba": 163.4035
+    },
+    "zloader": {
+     "n": 715,
+     "recall": 0.7636,
+     "bpp_ab": 75.6098,
+     "bpp_ba": 133.07
+    }
+   }
+  },
+  "Tranalyzer_L7": {
+   "n": 3369,
+   "micro": 0.9881,
+   "macro": 0.9805,
+   "per_family": {
+    "padcrypt": {
+     "n": 630,
+     "recall": 0.9937,
+     "bpp_ab": 52.5541,
+     "bpp_ba": 118.0931
+    },
+    "sisron": {
+     "n": 494,
+     "recall": 0.9879,
+     "bpp_ab": 28.7561,
+     "bpp_ba": 73.988
+    },
+    "tinba": {
+     "n": 1806,
+     "recall": 0.9972,
+     "bpp_ab": 51.4391,
+     "bpp_ba": 111.4706
+    },
+    "zloader": {
+     "n": 439,
+     "recall": 0.9431,
+     "bpp_ab": 38.2525,
+     "bpp_ba": 131.9296
+    }
+   }
+  }
+ },
+ "bpp_reference": {
+  "browser": 154.86,
+  "tools": 74.65,
+  "sim_dga": 75.1,
+  "sandbox_T2_L7": 46.6,
+  "sandbox_T2_L3": 95.07,
+  "browser_ba": 368.59,
+  "sim_dga_ba": 246.7,
+  "sandbox_T2_L7_ba": 109.88
+ },
+ "E28": {
+  "NetFlow-6 / LightGBM": {
+   "F1": 0.9937,
+   "sandbox_micro": 0.9881,
+   "sandbox_macro": 0.9805
+  },
+  "NetFlow-6 / RandomForest": {
+   "F1": 0.9938,
+   "sandbox_micro": 0.9878,
+   "sandbox_macro": 0.9799
+  },
+  "NetFlow-6 / ExtraTrees": {
+   "F1": 0.993,
+   "sandbox_micro": 0.9866,
+   "sandbox_macro": 0.9783
+  },
+  "NetFlow-6 / LogisticReg": {
+   "F1": 0.8108,
+   "sandbox_micro": 0.989,
+   "sandbox_macro": 0.9821
+  },
+  "NetFlow-6 / kNN": {
+   "F1": 0.9879,
+   "sandbox_micro": 0.9858,
+   "sandbox_macro": 0.9765
+  },
+  "NetFlow-18 / LightGBM": {
+   "F1": 0.9985,
+   "sandbox_micro": 0.9944,
+   "sandbox_macro": 0.9923
+  },
+  "NetFlow-18 / RandomForest": {
+   "F1": 0.9987,
+   "sandbox_micro": 0.2749,
+   "sandbox_macro": 0.4942
+  },
+  "NetFlow-18 / ExtraTrees": {
+   "F1": 0.9983,
+   "sandbox_micro": 0.2743,
+   "sandbox_macro": 0.4931
+  },
+  "NetFlow-18 / LogisticReg": {
+   "F1": 0.9554,
+   "sandbox_micro": 0.2763,
+   "sandbox_macro": 0.4964
+  },
+  "NetFlow-18 / kNN": {
+   "F1": 0.9962,
+   "sandbox_micro": 0.027,
+   "sandbox_macro": 0.0493
+  }
+ },
+ "E29": {
+  "F1": 0.9933,
+  "n": 3369,
+  "micro": 0.9911,
+  "macro": 0.9862,
+  "per_family": {
+   "padcrypt": {
+    "n": 630,
+    "recall": 0.9937,
+    "bpp_ab": 52.5541,
+    "bpp_ba": 118.0931
+   },
+   "sisron": {
+    "n": 494,
+    "recall": 0.9879,
+    "bpp_ab": 28.7561,
+    "bpp_ba": 73.988
+   },
+   "tinba": {
+    "n": 1806,
+    "recall": 0.9972,
+    "bpp_ab": 51.4391,
+    "bpp_ba": 111.4706
+   },
+   "zloader": {
+    "n": 439,
+    "recall": 0.9658,
+    "bpp_ab": 38.2525,
+    "bpp_ba": 131.9296
+   }
+  }
+ }
+}

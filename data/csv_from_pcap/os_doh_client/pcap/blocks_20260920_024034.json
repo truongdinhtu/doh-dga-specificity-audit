@@ -1,0 +1,200 @@
+{
+ "started_utc": "2026-09-19T18:40:26.912264+00:00",
+ "args": {
+  "blocks": 8,
+  "block_seconds": 150,
+  "gap_seconds": 80,
+  "cadence": [
+   0.3,
+   1.2
+  ],
+  "seed": 42,
+  "out": "Z:\\"
+ },
+ "order": [
+  "dga",
+  "dga",
+  "dga",
+  "benign",
+  "benign",
+  "benign",
+  "dga",
+  "dga",
+  "dga",
+  "benign",
+  "benign",
+  "benign",
+  "dga",
+  "dga",
+  "benign",
+  "benign"
+ ],
+ "hostname": "WIN-3OGLPBHB9VO",
+ "platform": "win32",
+ "blocks": [
+  {
+   "label": "dga:zloader",
+   "t_start": 1789843226.9268827,
+   "t_end": 1789843377.7894893,
+   "n_lookups": 194,
+   "rc": {
+    "gai:11001": 194
+   }
+  },
+  {
+   "label": "dga:qsnatch",
+   "t_start": 1789843457.822957,
+   "t_end": 1789843608.5417252,
+   "n_lookups": 191,
+   "rc": {
+    "gai:11001": 171,
+    "ok": 16,
+    "gai:11002": 4
+   }
+  },
+  {
+   "label": "dga:bazarbackdoor",
+   "t_start": 1789843688.5533864,
+   "t_end": 1789843838.618079,
+   "n_lookups": 197,
+   "rc": {
+    "gai:11001": 197
+   }
+  },
+  {
+   "label": "benign",
+   "t_start": 1789843918.665408,
+   "t_end": 1789844068.8516672,
+   "n_lookups": 198,
+   "rc": {
+    "ok": 162,
+    "gai:11001": 36
+   }
+  },
+  {
+   "label": "benign",
+   "t_start": 1789844148.8692086,
+   "t_end": 1789844299.089683,
+   "n_lookups": 182,
+   "rc": {
+    "ok": 155,
+    "gai:11001": 26,
+    "gai:11002": 1
+   }
+  },
+  {
+   "label": "benign",
+   "t_start": 1789844379.0963273,
+   "t_end": 1789844529.715457,
+   "n_lookups": 201,
+   "rc": {
+    "ok": 160,
+    "gai:11001": 41
+   }
+  },
+  {
+   "label": "dga:bazarbackdoor",
+   "t_start": 1789844609.729131,
+   "t_end": 1789844760.2676456,
+   "n_lookups": 201,
+   "rc": {
+    "gai:11001": 201
+   }
+  },
+  {
+   "label": "dga:flubot",
+   "t_start": 1789844840.2785807,
+   "t_end": 1789844990.352054,
+   "n_lookups": 209,
+   "rc": {
+    "gai:11001": 209
+   }
+  },
+  {
+   "label": "dga:zloader",
+   "t_start": 1789845070.4453166,
+   "t_end": 1789845220.6128502,
+   "n_lookups": 190,
+   "rc": {
+    "gai:11001": 189,
+    "ok": 1
+   }
+  },
+  {
+   "label": "benign",
+   "t_start": 1789845300.6547036,
+   "t_end": 1789845450.8349125,
+   "n_lookups": 199,
+   "rc": {
+    "ok": 166,
+    "gai:11001": 32,
+    "gai:11002": 1
+   }
+  },
+  {
+   "label": "benign",
+   "t_start": 1789845530.857956,
+   "t_end": 1789845680.9817376,
+   "n_lookups": 198,
+   "rc": {
+    "ok": 175,
+    "gai:11001": 22,
+    "gai:11002": 1
+   }
+  },
+  {
+   "label": "benign",
+   "t_start": 1789845760.9903913,
+   "t_end": 1789845911.8778524,
+   "n_lookups": 203,
+   "rc": {
+    "ok": 152,
+    "gai:11001": 50,
+    "gai:11002": 1
+   }
+  },
+  {
+   "label": "dga:zloader",
+   "t_start": 1789845991.9191272,
+   "t_end": 1789846142.4067636,
+   "n_lookups": 209,
+   "rc": {
+    "gai:11001": 209
+   }
+  },
+  {
+   "label": "dga:qsnatch",
+   "t_start": 1789846222.4343982,
+   "t_end": 1789846372.779089,
+   "n_lookups": 194,
+   "rc": {
+    "gai:11001": 179,
+    "ok": 15
+   }
+  },
+  {
+   "label": "benign",
+   "t_start": 1789846452.807534,
+   "t_end": 1789846603.090833,
+   "n_lookups": 194,
+   "rc": {
+    "ok": 167,
+    "gai:11001": 25,
+    "gai:11002": 2
+   }
+  },
+  {
+   "label": "benign",
+   "t_start": 1789846683.110404,
+   "t_end": 1789846833.9963043,
+   "n_lookups": 200,
+   "rc": {
+    "ok": 162,
+    "gai:11001": 35,
+    "gai:11002": 2,
+    "gai:11004": 1
+   }
+  }
+ ],
+ "finished_utc": "2026-09-19T19:40:34.000173+00:00"
+}

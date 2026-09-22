@@ -1,0 +1,117 @@
+{
+ "n_fold_cell_combos": 108,
+ "n_covered": 103,
+ "n_uncovered": 5,
+ "uncovered_flows": 857,
+ "classes_always_[0,1]": true,
+ "test_combos_single_class": 70,
+ "test_combos_two_class_and_covered": 35,
+ "cells_with_any_two_class_test": 19,
+ "percell_train_auc_median": 1.0,
+ "percell_train_auc_min": 0.9523,
+ "percell_test_auc_median": 0.3554,
+ "percell_test_auc_n_below_0.5": 24,
+ "percell_test_auc_n": 35,
+ "pooled_by_fold": [
+  {
+   "fold": 0,
+   "design": "pooled",
+   "inner_val_auc": 0.3624,
+   "invert_chosen": true,
+   "train_auc": 0.9928,
+   "outer_test_auc_raw": 0.4027,
+   "outer_test_auc_after_inner_orientation": 0.5973,
+   "n_train_sessions": 128,
+   "n_test_sessions": 32
+  },
+  {
+   "fold": 1,
+   "design": "pooled",
+   "inner_val_auc": 0.4505,
+   "invert_chosen": true,
+   "train_auc": 0.9942,
+   "outer_test_auc_raw": 0.4365,
+   "outer_test_auc_after_inner_orientation": 0.5635,
+   "n_train_sessions": 128,
+   "n_test_sessions": 32
+  },
+  {
+   "fold": 2,
+   "design": "pooled",
+   "inner_val_auc": 0.4654,
+   "invert_chosen": true,
+   "train_auc": 0.9933,
+   "outer_test_auc_raw": 0.3286,
+   "outer_test_auc_after_inner_orientation": 0.6714,
+   "n_train_sessions": 127,
+   "n_test_sessions": 33
+  },
+  {
+   "fold": 3,
+   "design": "pooled",
+   "inner_val_auc": 0.4944,
+   "invert_chosen": true,
+   "train_auc": 0.9943,
+   "outer_test_auc_raw": 0.3979,
+   "outer_test_auc_after_inner_orientation": 0.6021,
+   "n_train_sessions": 128,
+   "n_test_sessions": 32
+  },
+  {
+   "fold": 4,
+   "design": "pooled",
+   "inner_val_auc": 0.4402,
+   "invert_chosen": true,
+   "train_auc": 0.9936,
+   "outer_test_auc_raw": 0.351,
+   "outer_test_auc_after_inner_orientation": 0.649,
+   "n_train_sessions": 129,
+   "n_test_sessions": 31
+  }
+ ],
+ "pooled_oof_auc_raw": 0.3785,
+ "pooled_oof_auc_after_inner_orientation": 0.6215,
+ "pooled_oof_BA_after_inner_orientation": 0.5715,
+ "oriented_by_evaluation_set": {
+  "all_7248": {
+   "n": 7248,
+   "AUC_raw": 0.3785,
+   "AUC_oriented": 0.6215,
+   "AUC_oriented_ci95_session": [
+    0.5357,
+    0.7008
+   ],
+   "BA_oriented": 0.5715,
+   "BA_oriented_ci95_session": [
+    0.53,
+    0.6116
+   ]
+  },
+  "common_6391": {
+   "n": 6391,
+   "AUC_raw": 0.3822,
+   "AUC_oriented": 0.6178,
+   "AUC_oriented_ci95_session": [
+    0.5249,
+    0.6976
+   ],
+   "BA_oriented": 0.571,
+   "BA_oriented_ci95_session": [
+    0.5209,
+    0.6152
+   ]
+  }
+ },
+ "fold_cell_crosstab": {
+  "combos_considered": 108,
+  "combos_with_no_test_flows": 12,
+  "train1_test1": 2,
+  "train1_test2": 3,
+  "train2_test1": 68,
+  "train2_test2": 35,
+  "flows_train1_test1": 299,
+  "flows_train1_test2": 558,
+  "flows_train2_test1": 2652,
+  "flows_train2_test2": 3739
+ }
+}

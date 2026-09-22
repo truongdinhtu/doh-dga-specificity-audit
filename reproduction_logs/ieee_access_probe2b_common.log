@@ -1,0 +1,19 @@
+n_total=7248  common (all three designs predict)=6391  dropped=857 (11.82%)
+Abstentions are per-cell-model only, caused by single-class training folds:
+   fold2|curl|adguard|JSON                      test_flows=  180 train_flows=   118
+   fold3|h2dnspython|google|GET                 test_flows=  149 train_flows=   149
+   fold3|h2dnspython|google|POST                test_flows=  150 train_flows=   150
+   fold4|kdig|cloudflare|GET                    test_flows=  189 train_flows=   111
+   fold4|kdig|cloudflare|POST                   test_flows=  189 train_flows=   111
+   total abstained flows: 857
+
+On the COMMON set (what the paper should report):
+   percell          n=6391 BA=0.3494 AUC=0.2311 PR=0.409
+   pooled           n=6391 BA=0.429 AUC=0.3822 PR=0.4743
+   pooled_factors   n=6391 BA=0.3684 AUC=0.2802 PR=0.4301
+On each design's own full set (what the paper reported before):
+   percell          n=6391 BA=0.3494 AUC=0.2311 PR=0.409
+   pooled           n=7248 BA=0.4285 AUC=0.3785 PR=0.4197
+   pooled_factors   n=7248 BA=0.3687 AUC=0.2734 PR=0.3799
+
+Wrote per-flow predictions (7248 rows) and summary JSON.

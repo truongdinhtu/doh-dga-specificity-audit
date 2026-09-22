@@ -1,0 +1,118 @@
+raining@lmde-bm:~/Podman/chrome/scripts/generator-container$ ./generate.sh
+https://dns.adguard-dns.com/dns-query
+adguard
+16_post_adguard
+tcpdump: listening on tap0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+3525280 packets captured
+3525282 packets received by filter
+0 packets dropped by kernel
+
+17_post_adguard
+tcpdump: listening on tap0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+3348372 packets captured
+3348383 packets received by filter
+0 packets dropped by kernel
+
+18_post_no_telemetry_adguard
+tcpdump: listening on tap0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+2865003 packets captured
+2865022 packets received by filter
+0 packets dropped by kernel
+
+
+https://cloudflare-dns.com/dns-query
+cloudflare
+19_post_cloudflare
+tcpdump: listening on tap0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+4301602 packets captured
+4301610 packets received by filter
+0 packets dropped by kernel
+
+20_post_cloudflare
+tcpdump: listening on tap0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+4382673 packets captured
+4382679 packets received by filter
+0 packets dropped by kernel
+
+21_post_no_telemetry_cloudflare
+tcpdump: listening on tap0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+3539022 packets captured
+3539028 packets received by filter
+0 packets dropped by kernel
+
+
+https://dns.google/dns-query
+google
+22_get_google
+tcpdump: listening on tap0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+4274271 packets captured
+4274272 packets received by filter
+0 packets dropped by kernel
+
+23_get_google
+tcpdump: listening on tap0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+4041183 packets captured
+4041192 packets received by filter
+0 packets dropped by kernel
+
+24_post_no_telemetry_google
+tcpdump: listening on tap0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+3926069 packets captured
+3926075 packets received by filter
+0 packets dropped by kernel
+
+
+https://dns.quad9.net/dns-query
+quad9
+25_post_quad9
+tcpdump: listening on tap0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+4517543 packets captured
+4517560 packets received by filter
+0 packets dropped by kernel
+
+26_post_quad9
+tcpdump: listening on tap0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+4651735 packets captured
+4651742 packets received by filter
+0 packets dropped by kernel
+
+27_post_no_telemetry_quad9
+tcpdump: listening on tap0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+3836479 packets captured
+3836497 packets received by filter
+0 packets dropped by kernel
+
+
+raining@lmde-bm:~/Podman/chrome/scripts/generator-container$ for filename in *_timings.log; do
+    grep -P -H -c "Successful get" "$filename";
+done;
+16_post_adguard_timings.log:512
+17_post_adguard_timings.log:469
+18_post_no_telemetry_adguard_timings.log:435
+19_post_cloudflare_timings.log:502
+20_post_cloudflare_timings.log:526
+21_post_no_telemetry_cloudflare_timings.log:400
+22_get_google_timings.log:498
+23_get_google_timings.log:500
+24_post_no_telemetry_google_timings.log:450
+25_post_quad9_timings.log:488
+26_post_quad9_timings.log:494
+27_post_no_telemetry_quad9_timings.log:419
+
+
+for filename in *_timings.log; do
+    grep -P -H -c "ExceptionOccured" "$filename";
+done;
+16_post_adguard_timings.log:188
+17_post_adguard_timings.log:231
+18_post_no_telemetry_adguard_timings.log:165
+19_post_cloudflare_timings.log:199
+20_post_cloudflare_timings.log:174
+21_post_no_telemetry_cloudflare_timings.log:200
+22_get_google_timings.log:202
+23_get_google_timings.log:201
+24_post_no_telemetry_google_timings.log:151
+25_post_quad9_timings.log:212
+26_post_quad9_timings.log:207
+27_post_no_telemetry_quad9_timings.log:181
+

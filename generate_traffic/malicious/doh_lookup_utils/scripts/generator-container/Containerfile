@@ -1,0 +1,75 @@
+# build from base image
+FROM ubuntu:24.04
+
+USER root
+
+# No interactive frontend during container build
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        python3 \
+        curl \
+        sudo \
+        tcpdump \
+        iputils-ping \
+        bind9-dnsutils \
+        knot-dnsutils \
+        python3-h2 \
+        python3-httpx \
+        python3-dnspython \
+        python3-requests \
+        # for pydig with python ver >= 3.12
+        python3-setuptools \
+    && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
+
+# https://stackoverflow.com/questions/75608323/how-do-i-solve-error-externally-managed-environment-every-time-i-use-pip-3/#78652149
+#RUN pip3 install selenium xvfbwrapper
+
+RUN useradd -ms /bin/bash diguser
+
+# COPY when build, good for deploy but not develop
+# # define SOURCES variable as ./sources folder
+# ARG SOURCES=./sources
+# # https://docs.docker.com/reference/dockerfile/#destination
+# # copy files from $SOURCES to /sources
+# COPY $SOURCES /sources
+# WORKDIR /sources
+
+# make dir before, then mount when podman run
+RUN mkdir /sources
+WORKDIR /sources
+
+# install q
+RUN curl -OLf https://github.com/natesales/q/releases/download/v0.19.2/q_0.19.2_linux_amd64.deb \
+    && dpkg -i q_0.19.2_linux_amd64.deb \
+    && rm q_0.19.2_linux_amd64.deb
+
+# update dnspython
+RUN curl -OLf http://th.archive.ubuntu.com/ubuntu/pool/universe/h/httpx/python3-httpx_0.27.2-1_all.deb \
+    && curl -OLf http://th.archive.ubuntu.com/ubuntu/pool/main/d/dnspython/python3-dnspython_2.7.0-1ubuntu1_all.deb \
+    && dpkg -i python3-httpx_0.27.2-1_all.deb python3-dnspython_2.7.0-1ubuntu1_all.deb \
+    && rm python3-httpx_0.27.2-1_all.deb python3-dnspython_2.7.0-1ubuntu1_all.deb
+
+# install pydig
+#RUN --mount=type=bind,source=./pydig-master,target=/sources/pydig-master \
+#    python3 /sources/pydig-master/setup.py install
+RUN curl -OLf https://github.com/shuque/pydig/archive/refs/heads/master.zip \
+    && python3 -m zipfile -e master.zip /sources/ \
+    && cd /sources/pydig-master \
+    && python3 setup.py install \
+    && cd /sources \
+    && rm -r master.zip pydig-master
+
+# https://stackoverflow.com/questions/25873479/using-mkdir-m-p-and-chown-together-correctly
+#RUN mkdir /capture
+#RUN chown -R seluser:seluser /capture
+RUN install -d -o diguser -g diguser -m a+rw /capture
+
+RUN echo google.com > /tmplistin.txt
+
+ENV INPUT_FILE_PATH=/tmplistin.txt \
+    OUTPUT_FILE_NAME=outputfile \
+    TOOL="q" \
+    URI="https://cloudflare-dns.com/dns-query"
+
+CMD TIMINGS_FILE_NAME=$(echo ${OUTPUT_FILE_NAME}_timings.log); NAME=/capture/$OUTPUT_FILE_NAME bash /sources/run_$TOOL.sh $INPUT_FILE_PATH >> /capture/$TIMINGS_FILE_NAME

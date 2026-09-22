@@ -1,0 +1,84 @@
+# https://tranalyzer.com/tutorial/dockerinstall
+# https://tranalyzer.com/tutorial/installation.html
+# https://tranalyzer.com/tutorial/building
+# https://tranalyzer.com/tutorial/cheatsheet
+# https://tranalyzer.com/tutorial/output
+# https://tranalyzer.com/download/doc/documentation.pdf
+
+FROM ubuntu:24.04
+
+ARG DOCKER_BUILD "yes"
+ARG DEBIAN_FRONTEND=noninteractive
+
+ENV T2HOME="/t2-src"
+
+# build --format docker only https://github.com/containers/podman/issues/8477
+SHELL ["/bin/bash", "-c"]
+
+RUN apt-get -y update && apt-get install -y --no-install-recommends \
+        ca-certificates \
+        less \
+        pkg-config \
+        wget \
+        autoconf \
+        autoconf-archive \
+        automake \
+        libbsd-dev \
+        libpcap-dev \
+        libreadline-dev \
+        libtool \
+        make \
+        meson \
+        zlib1g-dev \
+        gawk \
+        bzip2 \
+    && apt-get -y autoremove \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
+
+# download (~200 MB) and extract tranalyzer
+RUN wget --no-verbose --trust-server-names --no-check-certificate https://tranalyzer.com/download/tranalyzer/latest \
+    && mkdir --parents "$T2HOME" \
+    && tar xzf tranalyzer2-*.tar.gz -C /tmp/ \
+    && rm tranalyzer2-*.tar.gz \
+    && mv /tmp/tranalyzer2-*/* "$T2HOME"
+
+ENV FDURLIMIT="180" \
+    ADD_FDURLIMIT_SUFFIX="false"
+
+# configure and build tranalyzer
+RUN : \
+    # run alias script, only works in interactive shell
+    && printf "if [ -f "$T2HOME/scripts/t2_aliases" ]; then\n    . "$T2HOME/scripts/t2_aliases" # Note the leading '.'\nfi\n" >> "$HOME/.bashrc" \
+    # "source" using /bin/sh with a leading "." instead
+    #&& source "$HOME/.bashrc" \
+    && . "$HOME/.bashrc" \
+    # configure tranalyzer: change payload length to include upto layer3 headers, i.e. packet_size = ip_header + (tcp_header + tcp_payload) (nFrstPkts, pktSIATHisto, basicStats, descriptiveStats plugins affected by PACKETLENGTH), change active_timeout to 180s, change idle_timeout to 65s, keep assign sub-flows to the different index
+    #&& t2conf tranalyzer2 -D PACKETLENGTH=1 -D FDURLIMIT="$FDURLIMIT" -D FLOW_TIMEOUT=65 -D FDLSFINDEX=0 \
+    && "$T2HOME"/scripts/t2conf/t2conf tranalyzer2 -D PACKETLENGTH=1 -D FDURLIMIT="$FDURLIMIT" -D FLOW_TIMEOUT=65 -D FDLSFINDEX=0 \
+    # configure basicFlow plugin: remove MAC add, ethertype, VLANID, subnet info, subnet org, headers
+    #&& t2conf basicFlow -D BFO_MAC=0 -D BFO_ETHERTYPE=0 -D BFO_VLAN=0 -D BFO_SUBNET_TEST=0 -D BFO_SUBNET_ORG=0 -D BFO_MAX_HDRDESC=0 \
+    && "$T2HOME"/scripts/t2conf/t2conf basicFlow -D BFO_MAC=0 -D BFO_ETHERTYPE=0 -D BFO_VLAN=0 -D BFO_SUBNET_TEST=0 -D BFO_SUBNET_ORG=0 -D BFO_MAX_HDRDESC=0 \
+    # configure basicStats plugin: remove ethernet padding count, remove reverse count, remove total count, add variance, add skew and kurtosis
+    #&& t2conf basicStats -D BS_PAD=0 -D BS_REV_CNT=0 -D BS_AGGR_CNT=0 -D BS_VAR=1 -D BS_SK=1 \
+    && "$T2HOME"/scripts/t2conf/t2conf basicStats -D BS_PAD=0 -D BS_REV_CNT=0 -D BS_AGGR_CNT=0 -D BS_VAR=1 -D BS_SK=1 \
+    # configure tcpFlags plugin: remove all options except TCP flags counts
+    #&& t2conf tcpFlags -D RTT_ESTIMATE=0 -D IPCHECKSUM=0 -D WINDOWSIZE=0 -D WINMIN=0 -D SEQ_ACK_NUM=0 -D FRAG_ANALYZE=0 -D NAT_BT_EST=0 -D SCAN_DETECTOR=0 -D MPTCP=0 -D TCPJA4T=0 -D TCPFLGCNT=1 \
+    && "$T2HOME"/scripts/t2conf/t2conf tcpFlags -D RTT_ESTIMATE=0 -D IPCHECKSUM=0 -D WINDOWSIZE=0 -D WINMIN=0 -D SEQ_ACK_NUM=0 -D FRAG_ANALYZE=0 -D NAT_BT_EST=0 -D SCAN_DETECTOR=0 -D MPTCP=0 -D TCPJA4T=0 -D TCPFLGCNT=1 \
+    # configure txtSink plugin: change flow file suffix to .csv
+    #&& t2conf txtSink -D TFS_FLOWS_TXT_SUFFIX=".csv" \
+    && "$T2HOME"/scripts/t2conf/t2conf txtSink -D TFS_FLOWS_TXT_SUFFIX=".csv" \
+    # build
+    #&& t2build -y tranalyzer2 basicFlow basicStats tcpFlags txtSink
+    && "$T2HOME"/autogen.sh -y tranalyzer2 basicFlow basicStats tcpFlags txtSink
+
+RUN mkdir /sources /data /result
+WORKDIR /data
+
+# COPY when build, good for deploy but not develop
+# copy files from ./sources to /sources
+COPY ./sources /sources
+
+#CMD t2
+#CMD "$T2HOME"/tranalyzer2/build/tranalyzer
+CMD bash /sources/export_L3_L7.sh

@@ -1,0 +1,6 @@
+{
+ "in_domain_F1": 0.9896,
+ "real_recall": 0.0569,
+ "fpr_tools": 0.9459,
+ "evasion_shap_aware": 0.9003
+}

@@ -1,0 +1,184 @@
+{
+ "doh_selection_rule": "dst_ip in resolver address set observed in training browser rows",
+ "resolver_ips": [
+  "104.16.248.249",
+  "104.16.249.249",
+  "149.112.112.112",
+  "223.5.5.5",
+  "8.8.4.4",
+  "8.8.8.8",
+  "9.9.9.9",
+  "94.140.14.14",
+  "94.140.15.15"
+ ],
+ "per_capture": [
+  {
+   "capture": "chrome_20_post_cloudflare",
+   "n_port443_all": 329,
+   "n_flows": 39,
+   "resolver_ips": {
+    "104.16.248.249": 21,
+    "104.16.249.249": 18
+   },
+   "Bpp_ab_median": 151.3,
+   "modelB_FPR_payload": 0.0769,
+   "modelB_fp_count": 3,
+   "modelT_FPR_payload": 0.0,
+   "modelT_fp_count": 0,
+   "modelB_FPR_network_layer": 0.0769
+  },
+  {
+   "capture": "chrome_22_get_google",
+   "n_port443_all": 176,
+   "n_flows": 37,
+   "resolver_ips": {
+    "8.8.4.4": 32,
+    "8.8.8.8": 5
+   },
+   "Bpp_ab_median": 152.7,
+   "modelB_FPR_payload": 0.1081,
+   "modelB_fp_count": 4,
+   "modelT_FPR_payload": 0.0,
+   "modelT_fp_count": 0,
+   "modelB_FPR_network_layer": 0.1351
+  },
+  {
+   "capture": "chrome_23_get_google",
+   "n_port443_all": 148,
+   "n_flows": 41,
+   "resolver_ips": {
+    "8.8.8.8": 26,
+    "8.8.4.4": 15
+   },
+   "Bpp_ab_median": 179.4,
+   "modelB_FPR_payload": 0.0244,
+   "modelB_fp_count": 1,
+   "modelT_FPR_payload": 0.0,
+   "modelT_fp_count": 0,
+   "modelB_FPR_network_layer": 0.0244
+  },
+  {
+   "capture": "chrome_25_post_quad9",
+   "n_port443_all": 151,
+   "n_flows": 38,
+   "resolver_ips": {
+    "9.9.9.9": 38
+   },
+   "Bpp_ab_median": 150.7,
+   "modelB_FPR_payload": 0.1316,
+   "modelB_fp_count": 5,
+   "modelT_FPR_payload": 0.0,
+   "modelT_fp_count": 0,
+   "modelB_FPR_network_layer": 0.1316
+  },
+  {
+   "capture": "firefox_1_post_adguard",
+   "n_port443_all": 132,
+   "n_flows": 14,
+   "resolver_ips": {
+    "94.140.15.15": 8,
+    "94.140.14.14": 6
+   },
+   "Bpp_ab_median": 136.4,
+   "modelB_FPR_payload": 0.0,
+   "modelB_fp_count": 0,
+   "modelT_FPR_payload": 0.0,
+   "modelT_fp_count": 0,
+   "modelB_FPR_network_layer": 0.0
+  },
+  {
+   "capture": "firefox_5_post_cloudflare",
+   "n_port443_all": 302,
+   "n_flows": 13,
+   "resolver_ips": {
+    "104.16.248.249": 10,
+    "104.16.249.249": 3
+   },
+   "Bpp_ab_median": 127.3,
+   "modelB_FPR_payload": 0.0,
+   "modelB_fp_count": 0,
+   "modelT_FPR_payload": 0.0,
+   "modelT_fp_count": 0,
+   "modelB_FPR_network_layer": 0.0
+  },
+  {
+   "capture": "firefox_13_post_quad9",
+   "n_port443_all": 264,
+   "n_flows": 13,
+   "resolver_ips": {
+    "149.112.112.112": 8,
+    "9.9.9.9": 5
+   },
+   "Bpp_ab_median": 127.1,
+   "modelB_FPR_payload": 0.0,
+   "modelB_fp_count": 0,
+   "modelT_FPR_payload": 0.0,
+   "modelT_fp_count": 0,
+   "modelB_FPR_network_layer": 0.0
+  },
+  {
+   "capture": "firefox_14_get_quad9",
+   "n_port443_all": 19,
+   "n_flows": 5,
+   "resolver_ips": {
+    "149.112.112.112": 3,
+    "9.9.9.9": 2
+   },
+   "Bpp_ab_median": 151.7,
+   "modelB_FPR_payload": 0.0,
+   "modelB_fp_count": 0,
+   "modelT_FPR_payload": 0.0,
+   "modelT_fp_count": 0,
+   "modelB_FPR_network_layer": 0.0
+  }
+ ],
+ "selection_counts": {
+  "port443_bidirectional_all": 1521,
+  "doh_to_resolver": 200,
+  "non_doh_https_excluded": 1321
+ },
+ "non_doh_https_reference": {
+  "n": 1321,
+  "modelB_flagged_rate": 0.2695,
+  "note": "page-load HTTPS, outside the DoH audit; reported only to document what was excluded"
+ },
+ "chrome_pooled": {
+  "n": 155,
+  "modelB_FPR_payload": 0.0839,
+  "modelT_FPR_payload": 0.0
+ },
+ "firefox_pooled": {
+  "n": 45,
+  "modelB_FPR_payload": 0.0,
+  "modelT_FPR_payload": 0.0
+ },
+ "equal_weight_mean_of_runs_modelB_FPR": 0.0426,
+ "all_pooled": {
+  "n": 200,
+  "n_captures": 8,
+  "modelB_FPR_payload": 0.065,
+  "modelT_FPR_payload": 0.0,
+  "modelB_FPR_network_layer": 0.07,
+  "Bpp_ab_median_payload": 152.7,
+  "Bpp_ab_median_training_browser": 162.6
+ },
+ "in_domain_browser_FPR_reference": {
+  "conventional_split_browser_FPR": 0.0017,
+  "session_grouped_browser_FPR_pooled_by_fold": [
+   0.0011,
+   0.0101,
+   0.003,
+   0.0045,
+   0.0011
+  ],
+  "session_grouped_browser_FPR_mean_of_folds": 0.0039,
+  "session_grouped_browser_FPR_pooled_all_flows": 0.004,
+  "session_grouped_browser_fp_count": 253,
+  "session_grouped_browser_n": 63558,
+  "per_session_browser_FPR_min": 0.0,
+  "per_session_browser_FPR_max": 0.0288,
+  "per_session_browser_FPR_median": 0.0015,
+  "n_browser_sessions": 28
+ },
+ "note": "These eight captures are separate runs sharing session names with training sessions; row-level matching to s2_mdoh.csv fails (see browser_pcap_verification.json), so they are an independent, provenance-complete browser sample, not the training captures."
+}

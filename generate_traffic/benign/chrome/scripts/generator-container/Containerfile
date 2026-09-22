@@ -1,0 +1,42 @@
+# build from base image
+FROM selenium/standalone-chrome:latest
+USER root
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    #python3 \
+    #sudo \
+    tcpdump \
+    iputils-ping \
+    python3-selenium \
+    python3-xvfbwrapper \
+&& rm -rf /var/lib/apt/lists/* /var/cache/apt/*
+
+# https://stackoverflow.com/questions/75608323/how-do-i-solve-error-externally-managed-environment-every-time-i-use-pip-3/#78652149
+#RUN pip3 install selenium xvfbwrapper
+
+# COPY when build, good for deploy but not develop
+# # define SOURCES variable as ./sources folder
+# ARG SOURCES=./sources
+# # https://docs.docker.com/reference/dockerfile/#destination
+# # copy files from $SOURCES to /sources
+# COPY $SOURCES /sources
+# WORKDIR /sources
+
+# make dir before, then mount when podman run
+RUN mkdir /sources
+WORKDIR /sources
+
+# https://stackoverflow.com/questions/25873479/using-mkdir-m-p-and-chown-together-correctly
+#RUN mkdir /capture
+#RUN chown -R seluser:seluser /capture
+RUN install -d -o seluser -g seluser -m a+rw /capture
+
+RUN echo google.com > /tmplistin.txt
+
+ENV INPUT_FILE_PATH=/tmplistin.txt \
+    OUTPUT_FILE_NAME=outputfile \
+    URI="" \
+    #[DOH_POST|DOH_GET|DISABLED]
+    DOH_REQUEST_PROTO=DOH_POST
+
+CMD TIMINGS_FILE_NAME=$(echo ${OUTPUT_FILE_NAME}_timings.log); NAME=/capture/$OUTPUT_FILE_NAME bash /sources/run_chrome.sh $INPUT_FILE_PATH >> /capture/$TIMINGS_FILE_NAME

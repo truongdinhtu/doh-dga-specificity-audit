@@ -1,0 +1,15 @@
+{
+ "protocol": "Probe 2b design (b), 3-factor cells, 5-fold session-grouped, common 6391-flow set",
+ "pooled_balanced_BA": {
+  "NetFlow-6 / LightGBM": 0.429,
+  "NetFlow-6 / RandomForest": 0.4287,
+  "NetFlow-6 / ExtraTrees": 0.4141,
+  "NetFlow-6 / LogisticReg": 0.4368,
+  "NetFlow-6 / kNN": 0.4143,
+  "NetFlow-18 / LightGBM": 0.4335,
+  "NetFlow-18 / RandomForest": 0.4262,
+  "NetFlow-18 / ExtraTrees": 0.4173,
+  "NetFlow-18 / LogisticReg": 0.409,
+  "NetFlow-18 / kNN": 0.3926
+ }
+}

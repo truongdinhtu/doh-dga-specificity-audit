@@ -1,0 +1,76 @@
+[1;33m[WRN][0m [0;33mRunning Tranalyzer as root on a pcap is not recommended[0m
+================================================================================
+Tranalyzer 0.9.4 (Anteater), Cobra. PID: 544, Prio: 0, SID: 666
+================================================================================
+Date: 1790041351.000059782 sec (Tue 22 Sep 2026 01:42:31 UTC)
+[1;34m[INF][0m [0;34mCreating flows for L2, IPv4, IPv6[0m
+[1;33m[WRN][0m [0;33mPCAP-NG, so *percentage completed* in end report might be less than 100%, will be fixed in a later version[0m
+Active plugins:
+    01: basicFlow, 0.9.4
+    02: basicStats, 0.9.4
+    03: tcpFlags, 0.9.4
+    04: txtSink, 0.9.4
+[1;34m[INF][0m [0;34mIPv4 Ver: 6, Rev: 17072025, Range Mode: 0, subnet ranges loaded: 7243401 (7.24 M)[0m
+[1;34m[INF][0m [0;34mIPv6 Ver: 6, Rev: 17072025, Range Mode: 0, subnet ranges loaded: 1422146 (1.42 M)[0m
+Processing file: firefox_1_post_adguard_decrypted.pcapng
+[1;34m[INF][0m [0;34mBPF: (tcp port 443) or (vlan and tcp port 443)[0m
+Link layer type: Ethernet [EN10MB/1]
+Snapshot length: 262144 (262.14 K)
+Dump start: 1736194471.699722000 sec (Mon 06 Jan 2025 20:14:31 GMT)
+Dump stop : 1736194558.883952000 sec (Mon 06 Jan 2025 20:15:58 GMT)
+Total dump duration: 87.184230000 sec (1m 27s)
+Finished processing. Elapsed time: 0.056809269 sec
+Finished unloading flow memory. Time: 0.062284198 sec
+Percentage completed: 97.03%
+Number of processed packets: 37222 (37.22 K)
+Number of processed bytes: 29874453 (29.87 M)
+Number of raw bytes: 29874453 (29.87 M)
+Number of pcap bytes: 31403740 (31.40 M)
+Number of IPv4 packets: 37151 (37.15 K) [99.81%]
+Number of IPv6 packets: 71 [0.19%]
+Number of A packets: 14219 (14.22 K) [38.20%]
+Number of B packets: 23003 (23.00 K) [61.80%]
+Number of A bytes: 1192687 (1.19 M) [3.99%]
+Number of B bytes: 28681766 (28.68 M) [96.01%]
+<A packet load>: 83.88
+<B packet load>: 1246.87 (1.25 K)
+--------------------------------------------------------------------------------
+[1mbasicStats:[0m Flow max(pktload): 1411 (1.41 K)
+[1mbasicStats:[0m Flow max(b/s), pkts: 25382028 (25.38 Mb/s), 3153 (3.15 K)
+[1mbasicStats:[0m Biggest L3 flow talker: 23.59.168.178 (SG): 3153 (3.15 K) [8.47%] packets
+[1mbasicStats:[0m Biggest L3 flow talker: 23.59.168.178 (SG): 4438070 (4.44 M) [14.86%] bytes
+[1mtcpFlags:[0m Aggregated ipFlags=0x4044
+[1mtcpFlags:[0m Aggregated tcpFStat=0x1001
+[1mtcpFlags:[0m Aggregated tcpFlags=0x071f
+[1mtcpFlags:[0m Aggregated tcpAnomaly=0x0001
+[1mtcpFlags:[0m Number of TCP SYN retries, seq retries: 4, 0
+--------------------------------------------------------------------------------
+Headers count: min: 3, max: 3, avg: 3.00
+Number of TCP packets: 37222 (37.22 K) [100.00%]
+Number of TCP bytes: 29874453 (29.87 M) [100.00%]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of processed      flows: 338
+Number of processed IPv4 flows: 267 [78.99%]
+Number of processed IPv6 flows: 71 [21.01%]
+Number of processed A    flows: 206 [60.95%]
+Number of processed B    flows: 132 [39.05%]
+Number of request        flows: 206 [60.95%]
+Number of reply          flows: 132 [39.05%]
+Total   A/B    flow asymmetry: 0.22
+Total req/rply flow asymmetry: 0.22
+Number of processed A+B packets/A+B flows: 110.12
+Number of processed A   packets/A   flows: 69.02
+Number of processed   B packets/  B flows: 174.27
+Number of processed total packets/s: 426.94
+Number of processed A+B   packets/s: 426.94
+Number of processed A     packets/s: 163.09
+Number of processed   B   packets/s: 263.84
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<Number of processed flows/s>: 3.88
+<Bandwidth>: 2741271 b/s (2.74 Mb/s)
+<Raw bandwidth>: 2741271 b/s (2.74 Mb/s)
+Max number of flows in memory: 303 [0.12%]
+Memory usage: 0.03 GB [1.53%]
+Aggregated flowStat=0x0c0000000000c000
+[1;34m[INF][0m [0;34mIPv4 flows[0m
+[1;34m[INF][0m [0;34mIPv6 flows[0m

@@ -1,0 +1,164 @@
+{
+  "E21_lofo": {
+    "padcrypt|source-holdout": {
+      "heldout_recall": 0.0463,
+      "n_heldout": 216,
+      "generated_rows_of_family_in_train": 0
+    },
+    "padcrypt|family-holdout": {
+      "heldout_recall": 0.0463,
+      "n_heldout": 216,
+      "generated_rows_of_family_in_train": 0
+    },
+    "sisron|source-holdout": {
+      "heldout_recall": 0.973,
+      "n_heldout": 37,
+      "generated_rows_of_family_in_train": 0
+    },
+    "sisron|family-holdout": {
+      "heldout_recall": 0.973,
+      "n_heldout": 37,
+      "generated_rows_of_family_in_train": 0
+    },
+    "tinba|source-holdout": {
+      "heldout_recall": 1.0,
+      "n_heldout": 1805,
+      "generated_rows_of_family_in_train": 0
+    },
+    "tinba|family-holdout": {
+      "heldout_recall": 1.0,
+      "n_heldout": 1805,
+      "generated_rows_of_family_in_train": 0
+    },
+    "zloader|source-holdout": {
+      "heldout_recall": 0.4482,
+      "n_heldout": 299,
+      "generated_rows_of_family_in_train": 5995
+    },
+    "zloader|family-holdout": {
+      "heldout_recall": 0.6522,
+      "n_heldout": 299,
+      "generated_rows_of_family_in_train": 0
+    },
+    "macro_mean_family_holdout": 0.6679,
+    "macro_mean_source_holdout": 0.6169
+  },
+  "E22_adversarial": {
+    "n_base_test_malicious": 4799,
+    "benign_ref_train": {
+      "mu": 154.73,
+      "sd": 41.1
+    },
+    "modelB_shap_aware": {
+      "ASR_conditional": 0.9645,
+      "n_detected_base": 4760,
+      "FNR_after": 0.9646,
+      "FNR_before": 0.0081,
+      "mean_added_bytes_per_pkt": 79.93,
+      "frac_zero_padding": 0.01
+    },
+    "hardened_in_domain": {
+      "F1": 0.9852,
+      "Precision": 0.9804,
+      "Recall": 0.99,
+      "BA": 0.9913
+    },
+    "hardened_shap_aware": {
+      "ASR_conditional": 0.0166,
+      "n_detected_base": 4751,
+      "FNR_after": 0.0167,
+      "FNR_before": 0.01,
+      "mean_added_bytes_per_pkt": 79.93,
+      "frac_zero_padding": 0.01
+    },
+    "adaptive": {
+      "120": {
+        "modelB": 0.7851,
+        "hardened": 0.0798
+      },
+      "130": {
+        "modelB": 0.8706,
+        "hardened": 0.0526
+      },
+      "155": {
+        "modelB": 0.9624,
+        "hardened": 0.0156
+      },
+      "180": {
+        "modelB": 0.9889,
+        "hardened": 0.0017
+      },
+      "200": {
+        "modelB": 0.9918,
+        "hardened": 0.0013
+      }
+    },
+    "modelR_shap_aware": {
+      "ASR_conditional": 0.9638,
+      "n_detected_base": 4755,
+      "FNR_after": 0.9642,
+      "FNR_before": 0.0092,
+      "mean_added_bytes_per_pkt": 79.93,
+      "frac_zero_padding": 0.01
+    }
+  },
+  "E23": {
+    "modelB_no_alidns": {
+      "F1": 0.995,
+      "Precision": 0.9966,
+      "Recall": 0.9934,
+      "BA": 0.9961,
+      "n": 85542,
+      "alidns_removed": 2009,
+      "alidns_benign": 2,
+      "alidns_malicious": 2007
+    },
+    "metadata_rule_modelT_split": {
+      "F1": 0.9296,
+      "Precision": 0.8684,
+      "Recall": 1.0,
+      "BA": 0.9729
+    },
+    "metadata_rule_full": {
+      "F1": 0.9298
+    }
+  },
+  "E24_length_matched": {
+    "n_matched_each": 391,
+    "gen_matched_classes": {
+      "0": 308,
+      "1": 83
+    },
+    "gen_matched_pkts_median": 205.0,
+    "sandbox_matched_pkts_median": 231.0,
+    "sandbox_matched_families": {
+      "zloader": 299,
+      "tinba": 64,
+      "padcrypt": 16,
+      "sisron": 12
+    },
+    "support_overlap_fraction_sandbox": 0.1659,
+    "modelB_full_on_matched_sandbox": 0.4066,
+    "modelB_trained_on_matched_gen": {
+      "recall_matched_sandbox": 0.1893,
+      "recall_all_sandbox": 0.0318
+    }
+  },
+  "E25": {
+    "cell_mean_BA": 0.5494,
+    "cell_mean_BA_ci95": [
+      0.5063,
+      0.5911
+    ],
+    "n_cells": 24,
+    "direction_check": {
+      "classes_": [
+        0,
+        1
+      ],
+      "pos_index": 1,
+      "AUC_pooled_client": 0.4012,
+      "AUC_if_scores_flipped": 0.5988
+    }
+  }
+}

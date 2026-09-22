@@ -1,0 +1,6 @@
+{
+ "matched_train_only_n_per_class": 6835,
+ "test_F1_on_unmatched_test": 0.9694,
+ "ASR_conditional": 0.8971,
+ "FNR_before": 0.03
+}

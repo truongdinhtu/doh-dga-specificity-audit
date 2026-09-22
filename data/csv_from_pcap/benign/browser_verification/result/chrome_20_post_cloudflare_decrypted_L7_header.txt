@@ -1,0 +1,61 @@
+# Date: 1790041344.000475608 sec (Tue 22 Sep 2026 01:42:24 UTC)
+# Tranalyzer 0.9.4 (Anteater), Cobra
+# Core configuration: L2, IPv4, IPv6
+# SensorID: 666
+# PID: 520
+# Priority: 0
+# Command line: /t2-src/tranalyzer2/build/tranalyzer -l -r chrome_20_post_cloudflare_decrypted.pcapng -w /result/ (tcp port 443) or (vlan and tcp port 443)
+# HW info: d4e6af2b2f62;Linux;7.1.10-200.fc44.aarch64;#1 SMP PREEMPT_DYNAMIC Sun Aug 23 16:21:29 UTC 2026;aarch64
+# SW info: libpcap version 1.10.4 (with TPACKET_V3)
+#
+# Plugins loaded:
+#   01: basicFlow, version 0.9.4
+#   02: basicStats, version 0.9.4
+#   03: tcpFlags, version 0.9.4
+#   04: txtSink, version 0.9.4
+#
+# Col No.	Type	Name	Description
+1	C	dir	Flow direction
+2	U64	flowInd	Flow index
+3	H64	flowStat	Flow status and warnings
+4	U64.U32	timeFirst	Date time of first packet
+5	U64.U32	timeLast	Date time of last packet
+6	U64.U32	duration	Flow duration
+7	IPX	srcIP	Source IP address
+8	U16	srcPort	Source port
+9	IPX	dstIP	Destination IP address
+10	U16	dstPort	Destination port
+11	U8	l4Proto	Layer 4 protocol
+12	U64	pktsSnt	Number of transmitted packets
+13	U64	l7BytesSnt	Number of transmitted layer 7 bytes
+14	U16	minL7PktSz	Minimum layer 7 packet size
+15	U16	maxL7PktSz	Maximum layer 7 packet size
+16	F	avgL7PktSz	Average layer 7 packet size
+17	F	stdL7PktSz	Standard deviation layer 7 packet size
+18	F	varL7PktSz	Variance layer 7 packet size
+19	F	skewL7PktSz	Skewness layer 7 packet size
+20	F	kurL7PktSz	Kurtosis layer 7 packet size
+21	F	pktps	Sent packets per second
+22	F	bytps	Sent bytes per second
+23	F	pktAsm	Packet stream asymmetry
+24	F	bytAsm	Byte stream asymmetry
+25	H16	tcpFStat	tcpFlags status
+26	U16	ipMindIPID	IP minimum delta IP ID
+27	U16	ipMaxdIPID	IP maximum delta IP ID
+28	U8	ipMinTTL	IP minimum TTL
+29	U8	ipMaxTTL	IP maximum TTL
+30	U8	ipTTLChg	IP TTL change count
+31	H8	ipToS	IP Type of Service hex
+32	H16	ipFlags	IP aggregated flags
+33	U16	ipOptCnt	IP options count
+34	H8_H32	ipOptCpCl_Num	IP aggregated options, copy-class and number
+35	U16_U16	ip6OptCntHH_D	IPv6 Hop-by-Hop destination option counts
+36	H32_H32	ip6OptHH_D	IPv6 aggregated Hop-by-Hop destination options
+37	H16	tcpFlags	TCP aggregated protocol flags (FIN-ACK, SYN-ACK, RST-ACK, CWR, ECE, URG, ACK, PSH, RST, SYN, FIN)
+38	H16	tcpAnomaly	TCP aggregated header anomaly flags
+39	U16_U16_U16_U16_U16_U16_U16_U16_U16_U16_U16_U16_U16_U16_U16_U16	tcpCntF_S_R_P_A_U_E_C_FA_SA_RA_N_SF_SFR_RF_X	TCP flags counts
+40	U16	tcpOptPktCnt	TCP options packet count
+41	U16	tcpOptCnt	TCP options count
+42	H32	tcpOptions	TCP aggregated options
+43	U16	tcpMSS	TCP maximum segment size
+44	U16	tcpWS	TCP window scale

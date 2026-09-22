@@ -1,0 +1,68 @@
+# Date: 1790041331.000219318 sec (Tue 22 Sep 2026 01:42:11 UTC)
+# Tranalyzer 0.9.4 (Anteater), Cobra
+# Core configuration: L2, IPv4, IPv6
+# SensorID: 666
+# PID: 14
+# Priority: 0
+# Command line: /t2-src/tranalyzer2/build/tranalyzer -l -r chrome_25_post_quad9_decrypted.pcapng -w /result/ (tcp port 443) or (vlan and tcp port 443)
+# HW info: 49d39bfcf06f;Linux;7.1.10-200.fc44.aarch64;#1 SMP PREEMPT_DYNAMIC Sun Aug 23 16:21:29 UTC 2026;aarch64
+# SW info: libpcap version 1.10.4 (with TPACKET_V3)
+#
+# Plugins loaded:
+#   01: basicFlow, version 0.9.4
+#   02: basicStats, version 0.9.4
+#   03: tcpFlags, version 0.9.4
+#   04: txtSink, version 0.9.4
+#
+# Col No.	Type	Name	Description
+1	C	dir	Flow direction
+2	U64	flowInd	Flow index
+3	H64	flowStat	Flow status and warnings
+4	U64.U32	timeFirst	Date time of first packet
+5	U64.U32	timeLast	Date time of last packet
+6	U64.U32	duration	Flow duration
+7	IPX	srcIP	Source IP address
+8	U16	srcPort	Source port
+9	IPX	dstIP	Destination IP address
+10	U16	dstPort	Destination port
+11	U8	l4Proto	Layer 4 protocol
+12	U64	pktsSnt	Number of transmitted packets
+13	U64	l3BytesSnt	Number of transmitted layer 3 bytes
+14	U16	minL3PktSz	Minimum layer 3 packet size
+15	U16	maxL3PktSz	Maximum layer 3 packet size
+16	F	avgL3PktSz	Average layer 3 packet size
+17	F	stdL3PktSz	Standard deviation layer 3 packet size
+18	F	varL3PktSz	Variance layer 3 packet size
+19	F	skewL3PktSz	Skewness layer 3 packet size
+20	F	kurL3PktSz	Kurtosis layer 3 packet size
+21	F	minIAT	Minimum IAT
+22	F	maxIAT	Maximum IAT
+23	F	avgIAT	Average IAT
+24	F	stdIAT	Standard deviation IAT
+25	F	varIAT	Variance IAT
+26	F	skewIAT	Skewness IAT
+27	F	kurIAT	Kurtosis IAT
+28	F	pktps	Sent packets per second
+29	F	bytps	Sent bytes per second
+30	F	pktAsm	Packet stream asymmetry
+31	F	bytAsm	Byte stream asymmetry
+32	H16	tcpFStat	tcpFlags status
+33	U16	ipMindIPID	IP minimum delta IP ID
+34	U16	ipMaxdIPID	IP maximum delta IP ID
+35	U8	ipMinTTL	IP minimum TTL
+36	U8	ipMaxTTL	IP maximum TTL
+37	U8	ipTTLChg	IP TTL change count
+38	H8	ipToS	IP Type of Service hex
+39	H16	ipFlags	IP aggregated flags
+40	U16	ipOptCnt	IP options count
+41	H8_H32	ipOptCpCl_Num	IP aggregated options, copy-class and number
+42	U16_U16	ip6OptCntHH_D	IPv6 Hop-by-Hop destination option counts
+43	H32_H32	ip6OptHH_D	IPv6 aggregated Hop-by-Hop destination options
+44	H16	tcpFlags	TCP aggregated protocol flags (FIN-ACK, SYN-ACK, RST-ACK, CWR, ECE, URG, ACK, PSH, RST, SYN, FIN)
+45	H16	tcpAnomaly	TCP aggregated header anomaly flags
+46	U16_U16_U16_U16_U16_U16_U16_U16_U16_U16_U16_U16_U16_U16_U16_U16	tcpCntF_S_R_P_A_U_E_C_FA_SA_RA_N_SF_SFR_RF_X	TCP flags counts
+47	U16	tcpOptPktCnt	TCP options packet count
+48	U16	tcpOptCnt	TCP options count
+49	H32	tcpOptions	TCP aggregated options
+50	U16	tcpMSS	TCP maximum segment size
+51	U16	tcpWS	TCP window scale

@@ -1,0 +1,294 @@
+{
+  "E11_grouped": {
+    "Model-B": {
+      "random_split": {
+        "F1": 0.9937,
+        "Precision": 0.9956,
+        "Recall": 0.9919,
+        "BA": 0.9951
+      },
+      "grouped_mean": {
+        "F1": 0.9886,
+        "Precision": 0.9895,
+        "Recall": 0.9878,
+        "BA": 0.9919
+      },
+      "grouped_std": {
+        "F1": 0.0065,
+        "Precision": 0.0089,
+        "Recall": 0.0102,
+        "BA": 0.0052
+      },
+      "n_groups": 156
+    },
+    "Model-T": {
+      "random_split": {
+        "F1": 0.9396,
+        "Precision": 0.9082,
+        "Recall": 0.9733,
+        "BA": 0.9691
+      },
+      "grouped_mean": {
+        "F1": 0.9056,
+        "Precision": 0.8736,
+        "Recall": 0.9405,
+        "BA": 0.9459
+      },
+      "grouped_std": {
+        "F1": 0.0196,
+        "Precision": 0.0181,
+        "Recall": 0.0273,
+        "BA": 0.0155
+      },
+      "n_groups": 188
+    }
+  },
+  "E12_conditional": {
+    "reference_browser_vs_dga": {
+      "BA": 0.9917,
+      "BA_std": 0.0054,
+      "AUC": 0.9997,
+      "AUC_std": 0.0004,
+      "F1": 0.9878,
+      "n_benign": 63558,
+      "n_malicious": 23993
+    },
+    "per_client": {
+      "curl": {
+        "BA": 0.4885,
+        "BA_std": 0.0719,
+        "AUC": 0.4724,
+        "AUC_std": 0.0917,
+        "F1": 0.5854,
+        "n_benign": 616,
+        "n_malicious": 616
+      },
+      "h2": {
+        "BA": 0.5117,
+        "BA_std": 0.0616,
+        "AUC": 0.4756,
+        "AUC_std": 0.0849,
+        "F1": 0.5967,
+        "n_benign": 600,
+        "n_malicious": 600
+      },
+      "h2dnspython": {
+        "BA": 0.3828,
+        "BA_std": 0.0703,
+        "AUC": 0.2889,
+        "AUC_std": 0.1443,
+        "F1": 0.5067,
+        "n_benign": 1199,
+        "n_malicious": 1199
+      },
+      "kdig": {
+        "BA": 0.4379,
+        "BA_std": 0.0578,
+        "AUC": 0.4059,
+        "AUC_std": 0.1197,
+        "F1": 0.5509,
+        "n_benign": 1209,
+        "n_malicious": 1209
+      }
+    },
+    "pooled_cli": {
+      "BA": 0.4432,
+      "BA_std": 0.0114,
+      "AUC": 0.4012,
+      "AUC_std": 0.0263,
+      "F1": 0.5504,
+      "n_benign": 3624,
+      "n_malicious": 3624
+    }
+  },
+  "E13_uncertainty": {
+    "stage2_test_set": {
+      "F1": {
+        "point": 0.9937,
+        "ci95": [
+          0.9906,
+          0.9963
+        ]
+      },
+      "Precision": {
+        "point": 0.9956,
+        "ci95": [
+          0.9921,
+          0.9982
+        ]
+      },
+      "Recall": {
+        "point": 0.9919,
+        "ci95": [
+          0.9864,
+          0.9961
+        ]
+      },
+      "BA": {
+        "point": 0.9951,
+        "ci95": [
+          0.9923,
+          0.9973
+        ]
+      }
+    },
+    "fpr_tools": {
+      "point": 0.9713,
+      "ci95": [
+        0.946,
+        0.9918
+      ]
+    },
+    "real_malware_recall": {
+      "padcrypt": {
+        "point": 0.0093,
+        "n": 216,
+        "ci95": [
+          0.0,
+          0.0231
+        ]
+      },
+      "sisron": {
+        "point": 0.7838,
+        "n": 37,
+        "ci95": [
+          0.6486,
+          0.8919
+        ]
+      },
+      "tinba": {
+        "point": 0.0006,
+        "n": 1805,
+        "ci95": [
+          0.0,
+          0.0017
+        ]
+      },
+      "zloader": {
+        "point": 0.5084,
+        "n": 299,
+        "ci95": [
+          0.4515,
+          0.5686
+        ]
+      },
+      "overall": {
+        "point": 0.0781,
+        "n": 2357,
+        "ci95": [
+          0.067,
+          0.0891
+        ]
+      }
+    },
+    "seeds": {
+      "n": 10,
+      "F1_mean": 0.9939,
+      "F1_std": 0.0007,
+      "shap_top_share_mean": 0.6711,
+      "shap_top_share_std": 0.0137
+    }
+  },
+  "E14_detector_family": {
+    "NetFlow-6 / LightGBM": {
+      "grouped_F1": 0.9886,
+      "grouped_F1_std": 0.0065,
+      "fpr_tools": 0.9713,
+      "real_malware_recall": 0.0781,
+      "tool_macroF1": 0.9612,
+      "family_macroF1": 0.5185,
+      "conditional_BA": 0.4432,
+      "conditional_AUC": 0.4012
+    },
+    "NetFlow-6 / RandomForest": {
+      "grouped_F1": 0.989,
+      "grouped_F1_std": 0.006,
+      "fpr_tools": 0.9655,
+      "real_malware_recall": 0.0492,
+      "tool_macroF1": 0.9552,
+      "family_macroF1": 0.5076,
+      "conditional_BA": 0.435,
+      "conditional_AUC": 0.4184
+    },
+    "NetFlow-6 / ExtraTrees": {
+      "grouped_F1": 0.9885,
+      "grouped_F1_std": 0.006,
+      "fpr_tools": 0.9639,
+      "real_malware_recall": 0.0403,
+      "tool_macroF1": 0.9542,
+      "family_macroF1": 0.4928,
+      "conditional_BA": 0.4216,
+      "conditional_AUC": 0.4186
+    },
+    "NetFlow-6 / LogisticReg": {
+      "grouped_F1": 0.8041,
+      "grouped_F1_std": 0.0284,
+      "fpr_tools": 0.8322,
+      "real_malware_recall": 0.0429,
+      "tool_macroF1": 0.5881,
+      "family_macroF1": 0.2746,
+      "conditional_BA": 0.45,
+      "conditional_AUC": 0.4244
+    },
+    "NetFlow-6 / kNN": {
+      "grouped_F1": 0.9832,
+      "grouped_F1_std": 0.0082,
+      "fpr_tools": 0.9539,
+      "real_malware_recall": 0.8205,
+      "tool_macroF1": 0.9092,
+      "family_macroF1": 0.4054,
+      "conditional_BA": 0.4125,
+      "conditional_AUC": 0.3718
+    },
+    "NetFlow-18 / LightGBM": {
+      "grouped_F1": 0.9973,
+      "grouped_F1_std": 0.0027,
+      "fpr_tools": 0.9868,
+      "real_malware_recall": 0.0407,
+      "tool_macroF1": 0.9758,
+      "family_macroF1": 0.5532,
+      "conditional_BA": 0.4517,
+      "conditional_AUC": 0.4001
+    },
+    "NetFlow-18 / RandomForest": {
+      "grouped_F1": 0.9976,
+      "grouped_F1_std": 0.002,
+      "fpr_tools": 0.984,
+      "real_malware_recall": 0.0378,
+      "tool_macroF1": 0.9709,
+      "family_macroF1": 0.5334,
+      "conditional_BA": 0.44,
+      "conditional_AUC": 0.422
+    },
+    "NetFlow-18 / ExtraTrees": {
+      "grouped_F1": 0.9971,
+      "grouped_F1_std": 0.0021,
+      "fpr_tools": 0.9818,
+      "real_malware_recall": 0.0221,
+      "tool_macroF1": 0.9643,
+      "family_macroF1": 0.5039,
+      "conditional_BA": 0.422,
+      "conditional_AUC": 0.4216
+    },
+    "NetFlow-18 / LogisticReg": {
+      "grouped_F1": 0.9467,
+      "grouped_F1_std": 0.018,
+      "fpr_tools": 0.9338,
+      "real_malware_recall": 0.1379,
+      "tool_macroF1": 0.6425,
+      "family_macroF1": 0.2918,
+      "conditional_BA": 0.4144,
+      "conditional_AUC": 0.3923
+    },
+    "NetFlow-18 / kNN": {
+      "grouped_F1": 0.9932,
+      "grouped_F1_std": 0.0035,
+      "fpr_tools": 0.9708,
+      "real_malware_recall": 0.0017,
+      "tool_macroF1": 0.9126,
+      "family_macroF1": 0.3886,
+      "conditional_BA": 0.3942,
+      "conditional_AUC": 0.3316
+    }
+  }
+}

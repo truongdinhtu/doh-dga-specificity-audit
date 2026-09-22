@@ -1,0 +1,82 @@
+[
+ {
+  "capture": "zloader_10_google_h2_1",
+  "n_t2": 5,
+  "pkts_ab_med": 16.0,
+  "ref_pkts_ab_med": 16.0,
+  "L3_Bpp": 104.375,
+  "L7_Bpp": 63.125,
+  "ref_Bpp": 64.4375,
+  "hdr_per_pkt": 41.2686274509804
+ },
+ {
+  "capture": "zloader_11_google_curl_1",
+  "n_t2": 5,
+  "pkts_ab_med": 15.0,
+  "ref_pkts_ab_med": 15.0,
+  "L3_Bpp": 106.8,
+  "L7_Bpp": 65.46666666666667,
+  "ref_Bpp": 66.66666666666667,
+  "hdr_per_pkt": 41.352380952380955
+ },
+ {
+  "capture": "zloader_12_quad9_kdig_1",
+  "n_t2": 12,
+  "pkts_ab_med": 14.0,
+  "ref_pkts_ab_med": 15.0,
+  "L3_Bpp": 96.0,
+  "L7_Bpp": 54.666666666666664,
+  "ref_Bpp": 56.0,
+  "hdr_per_pkt": 44.47718253968254
+ },
+ {
+  "capture": "zloader_13_quad9_h2dnspython_1",
+  "n_t2": 11,
+  "pkts_ab_med": 15.0,
+  "ref_pkts_ab_med": 15.0,
+  "L3_Bpp": 109.2,
+  "L7_Bpp": 67.86666666666666,
+  "ref_Bpp": 69.2,
+  "hdr_per_pkt": 43.0487012987013
+ },
+ {
+  "capture": "zloader_15_alidns_curl_1",
+  "n_t2": 9,
+  "pkts_ab_med": 12.0,
+  "ref_pkts_ab_med": 12.0,
+  "L3_Bpp": 113.0,
+  "L7_Bpp": 71.46153846153847,
+  "ref_Bpp": 79.08333333333333,
+  "hdr_per_pkt": 58.98860398860399
+ },
+ {
+  "capture": "zloader_2_adguard_h2_1",
+  "n_t2": 5,
+  "pkts_ab_med": 14.0,
+  "ref_pkts_ab_med": 13.0,
+  "L3_Bpp": 110.14285714285714,
+  "L7_Bpp": 68.71428571428571,
+  "ref_Bpp": 75.46153846153847,
+  "hdr_per_pkt": 41.45054945054945
+ },
+ {
+  "capture": "zloader_4_cloudflare_kdig_1",
+  "n_t2": 10,
+  "pkts_ab_med": 14.5,
+  "ref_pkts_ab_med": 15.0,
+  "L3_Bpp": 96.87380952380951,
+  "L7_Bpp": 55.49285714285715,
+  "ref_Bpp": 56.53333333333333,
+  "hdr_per_pkt": 41.37261904761905
+ },
+ {
+  "capture": "zloader_9_google_h2dnspython_1",
+  "n_t2": 10,
+  "pkts_ab_med": 16.0,
+  "ref_pkts_ab_med": 17.0,
+  "L3_Bpp": 105.78125,
+  "L7_Bpp": 64.53125,
+  "ref_Bpp": 63.1764705882353,
+  "hdr_per_pkt": 41.25196078431373
+ }
+]

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>PayloadContent</key>
+  <array>
+    <dict>
+      <key>PayloadDisplayName</key><string>DoH Cloudflare (audit experiment)</string>
+      <key>PayloadIdentifier</key><string>vn.edu.tdtu.doh-audit.cloudflare</string>
+      <key>PayloadType</key><string>com.apple.dnsSettings.managed</string>
+      <key>PayloadUUID</key><string>7B1F3C2A-5D4E-4F60-9A1B-2C3D4E5F6A71</string>
+      <key>PayloadVersion</key><integer>1</integer>
+      <key>DNSSettings</key>
+      <dict>
+        <key>DNSProtocol</key><string>HTTPS</string>
+        <key>ServerURL</key><string>https://cloudflare-dns.com/dns-query</string>
+      </dict>
+    </dict>
+  </array>
+  <key>PayloadDisplayName</key><string>DoH audit experiment (Cloudflare)</string>
+  <key>PayloadIdentifier</key><string>vn.edu.tdtu.doh-audit</string>
+  <key>PayloadType</key><string>Configuration</string>
+  <key>PayloadUUID</key><string>0F9E8D7C-6B5A-4C3D-8E2F-1A0B9C8D7E60</string>
+  <key>PayloadVersion</key><integer>1</integer>
+</dict>
+</plist>
